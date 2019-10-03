@@ -1,0 +1,68 @@
+.footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    padding-top: 60px;
+    padding-bottom: 10px;
+
+        background-color: #018b7d;
+        /* IE9, iOS 3.2+ */
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMDA1ODcxIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMwMWJkODgiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+        /* Android 2.3 */
+        background-image: -webkit-repeating-linear-gradient(left,rgb(0, 88, 113) 0%,rgb(1, 189, 136) 100%);
+        /* IE10+ */
+        background-image: repeating-linear-gradient(to right,rgb(0, 88, 113) 0%,rgb(1, 189, 136) 100%);
+        background-image: -ms-repeating-linear-gradient(left,rgb(0, 88, 113) 0%,rgb(1, 189, 136) 100%);
+    
+    img {
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 85px;
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1;
+        color: white;
+    }
+}
+
+
+@media screen and (max-width: 1600px) {
+    .footer {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .footer {
+        padding: 40px 15px 10px 15px;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+
+    .footer p {
+        font-size: 18px;
+        margin-bottom: 45px;
+        text-align: center;
+    }
+}
+

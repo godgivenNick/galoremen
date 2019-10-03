@@ -1,0 +1,274 @@
+.tariff {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    background: url('../img/home/tariff_bg.jpg') no-repeat center center;
+    background-size: cover;
+
+    padding-top: 100px;
+    padding-bottom: 150px;
+
+    &__title {
+        font-size: 54px;
+        line-height: 1;
+        font-weight: 900;
+        color: var(--trawl_dirty_blue);
+        margin-bottom: 90px;
+
+        text-transform: uppercase;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 1120px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+}
+
+.tariff-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 460px;
+
+    li {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+
+        overflow: hidden;
+        margin-bottom: 50px;
+
+        p {
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 400;
+            color: white;
+
+            overflow: hidden;
+
+            background-color: var(--trawl_green);
+            z-index: 2;
+            padding-right: 3px;
+        }
+        span {
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 500;
+            color: white;
+
+            position: relative;
+            &::before {
+                content: '';
+
+                width: 460px;
+                border-bottom: 2px dotted rgba(255,255,255,0.75);
+                position: absolute;
+                right: calc(100% + 2px);
+                bottom: 3px;
+                z-index: 1;
+            
+            }
+        }
+    }
+}
+
+
+.tariff-reg {
+    width: 460px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    &__title {
+        font-size: 34px;
+        line-height: 42px;
+        font-weight: 900;
+        letter-spacing: 1.7px;
+        color: white;
+
+        text-transform: uppercase;
+
+        margin-bottom: 20px;
+    }
+
+    & > p {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 36px;
+        color: white;
+    }
+
+    &-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        li {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 36px;
+            color: white;
+        }
+
+        margin-bottom: 45px;
+    }
+
+
+
+    &__btn {
+        width: 270px;
+        height: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    
+        background-color: rgb(232, 99, 64);
+    
+        font-size: 16px;
+        line-height: 1;
+        letter-spacing: 1.3px;
+        color: white;
+    
+        text-transform: uppercase;
+    
+        border-radius: 5px;
+    
+        cursor: pointer;
+        -webkit-transition: .25s ease;
+        transition: .25s ease;
+    
+        &:hover {
+            background-color: #ef572f;
+        }
+    
+        &:active {
+            background-color: #ef481c;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1600px) {
+    .tariff {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .tariff-reg {
+        width: auto;
+    }
+
+    .tariff-list {
+        width: 100%;
+        max-width: 360px;
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .tariff {
+        padding: 40px 15px;
+    }
+
+    .tariff__title {
+        font-size: 40px;
+        margin-bottom: 45px;
+        text-align: center;
+    }
+
+    .tariff__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .tariff-list {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .tariff-list li {
+        margin-bottom: 15px;
+
+        p {
+            font-size: 16px;
+        }
+
+        span {
+            font-size: 16px;
+        }
+    }
+
+    .tariff-reg__title {
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.25;
+        margin-bottom: 15px;
+
+    }
+
+    .tariff-reg > p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .tariff-reg-list li {
+        font-size: 16px;
+        line-height: 1.5;;
+    }
+
+
+    .tariff-reg__btn {
+        -ms-flex-item-align: center;
+            align-self: center;
+        font-size: 14px;
+        height: 46px;
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
