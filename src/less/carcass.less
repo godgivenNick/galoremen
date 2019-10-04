@@ -3,6 +3,10 @@ html, body {
 	margin: 0;
 	padding: 0;
 
+	max-width: 1920px;
+	overflow-x: hidden;
+
+
 	font-family: 'Roboto', sans-serif;
 	
 	* {
@@ -55,6 +59,27 @@ section {
 	width: 100%;
 }
 
+/**/
+.gui {
+	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	&.n-container {
+		padding: 200px 130px;
+	}
+
+	& > * {
+		margin-bottom: 30px;
+		margin-right: 30px;
+	}
+
+	.btn {
+		max-width: 251px;
+	}
+}
+/**/
+
 .main-overlay {
 	position: fixed;
     top: 0;
@@ -74,4 +99,13 @@ section {
 		opacity: 1;
 		transition: .25s ease;
 	}
+}
+
+
+/* Общие стили для всей системы */
+
+.n-container {
+	width: 100%;
+	padding: 0 130px;
+	display: flex;
 }

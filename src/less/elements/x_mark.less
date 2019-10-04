@@ -1,0 +1,28 @@
+.x-mark-64 {
+    width: 56px;
+    height: 56px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+
+        width: 64px;
+        height: 16px;
+        background-color: var(--galore_grey_dark);
+
+        position: absolute;
+        right: -4px;
+        top: calc(50% - 8px);
+    }
+
+    &::before {
+        transform-origin: center center;
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        transform-origin: center center;
+        transform: rotate(45deg);
+    }
+}

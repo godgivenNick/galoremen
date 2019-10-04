@@ -1,0 +1,108 @@
+.btn {
+    min-width: 251px;
+    height: 64px;
+
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0; /**/
+
+    border: 1px solid var(--galore_grey_dark);
+    border-radius: 0;
+
+    padding-top: 26px;
+    padding-bottom: 22px;
+    padding-left: 0;
+    padding-right: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: var(--galore_grey_dark);
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: .25s ease-out;
+
+    &:active {
+        box-shadow: none;
+    }
+
+
+    /*
+        пустая кнопка
+        
+        - фон прозрачный.
+        - используется для светлых фонов ( т.к. бордер черный )
+    
+    */
+    &--black {
+        background-color: rgba(255,255,255,0);
+        border-color: var(--galore_grey_dark);
+        color: var(--galore_grey_dark);
+
+        &:hover {
+            background-color: var(--galore_grey_dark);
+            color: var(--galore_white);
+            text-decoration: underline;
+        }
+
+        &:active {
+            background-color: var(--galore_black);
+            color: var(--galore_white);
+            text-decoration: underline;
+        }
+    }
+
+
+
+    /*
+        черная кнопка
+        
+        - на самом деле не черная, а такая же пустая.
+        - используется для темных фонов ( т.к. бордер белый )
+    
+    */
+    &--white {
+        background-color: rgba(255,255,255,0);
+        border-color: var(--galore_white);
+        color: var(--galore_white);
+
+        &:hover {
+            background-color: var(--galore_black);
+            color: var(--galore_white);
+            text-decoration: underline;
+        }
+
+        &:active {
+            background-color: var(--galore_black);
+            color: var(--galore_white);
+            text-decoration: underline;
+        }
+    }
+
+
+
+    /*
+        серая кнопка
+    */
+    &--grey {
+        background-color: var(--galore_grey_dark);
+        border-color: var(--galore_grey_dark);
+        color: var(--galore_white);
+
+        &:hover {
+            background-color: var(--galore_black);
+            color: var(--galore_white);
+            text-decoration: underline;
+        }
+
+        &:active {
+            background-color: var(--galore_black);
+            color: var(--galore_white);
+            text-decoration: underline;
+        }
+    }
+}

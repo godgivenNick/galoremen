@@ -4,19 +4,18 @@ html(lang="ru")
 		include carcass/head.pug
 
 	body
-		include blocks/main/header.pug
-		
-		include blocks/main/main.pug
-		
-		include elements/popup_registration.pug
+		include blocks/header.pug
+
+		//- GUi для демонстрации элементов
+		include blocks/GUI.pug
+
+
+		include blocks/main.pug
 
 		i.main-overlay
-		include blocks/main/footer.pug
+		include blocks/footer.pug
 
 		script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
 
 		script(type="application/javascript" src='./js/jquery.fancybox.min.js')
 		script(type="application/javascript" src='./js/swiper.min.js')
-
-		script(type="application/javascript" src='./js/header.js')
-		script(type="application/javascript" src='./js/home.js')

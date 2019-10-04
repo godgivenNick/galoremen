@@ -102,7 +102,7 @@ gulp.task("server", function() {
   });
 
 
-  gulp.watch("less/**/*.less", ["style"]);
+  gulp.watch("less/**/*.less", ["style"]).on("change", server.reload);
   gulp.watch("js/**/*.js", ["js"]);
   gulp.watch("pug/**/*.pug", ["html"]).on("change", server.reload);
 });
