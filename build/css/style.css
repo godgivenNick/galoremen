@@ -1217,6 +1217,7 @@ section {
 .header-main__logo {
   display: flex;
   margin-right: 107px;
+  height: 74px;
 }
 .header-main__logo a {
   margin-right: 24px;
