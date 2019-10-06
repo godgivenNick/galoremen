@@ -1,0 +1,77 @@
+section.product-card
+  .n-container.product-card__n-container
+
+    //- galery
+    .product-card-galery
+      .product-card-galery__main
+        .swiper-wrapper
+          img.swiper-slide(src="./img/product_card/galery/1.jpg", alt="")
+          img.swiper-slide(src="./img/product_card/galery/2.jpg", alt="")
+          img.swiper-slide(src="./img/product_card/galery/1.jpg", alt="")
+          img.swiper-slide(src="./img/product_card/galery/2.jpg", alt="")
+          img.swiper-slide(src="./img/product_card/galery/1.jpg", alt="")
+          img.swiper-slide(src="./img/product_card/galery/2.jpg", alt="")
+      .product-card-galery__tumbs
+        .swiper-wrapper
+          img.swiper-slide.product-card-galery__tumb(src="./img/product_card/galery/1.jpg", alt="")
+          img.swiper-slide.product-card-galery__tumb(src="./img/product_card/galery/2.jpg", alt="")
+          img.swiper-slide.product-card-galery__tumb(src="./img/product_card/galery/1.jpg", alt="")
+          img.swiper-slide.product-card-galery__tumb(src="./img/product_card/galery/2.jpg", alt="")
+          img.swiper-slide.product-card-galery__tumb(src="./img/product_card/galery/1.jpg", alt="")
+          img.swiper-slide.product-card-galery__tumb(src="./img/product_card/galery/2.jpg", alt="")
+
+    <!-- правая часть -->
+    .product-card-main
+      .product-card__name Восстанавливающий гель для кожи вокруг глаз London Grooming, 30 мл
+      img.product-card__brand-img(src="./img/product_card/product_card_brand_test.png", alt="Название бренда")
+      .product-card-content
+        .product-card-tabs
+          .product-card-tab(product-tab='1') Описание
+          .product-card-tab(product-tab='2') Характеристики
+          .product-card-tab(product-tab='3') Применение
+        .product-card-section(product-section='1')
+          p.product-card-section__text Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой линейки косметики. 
+        .product-card-section(product-section='2')
+          p.product-card-section__text Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице.
+        .product-card-section(product-section='3')
+          p.product-card-section__text Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния.
+
+      <!-- дисплеить, если товар ессь в наличии -->
+      span.product-card-amount В наличии
+
+      <!-- старая и новая цены -->
+      .product-card-prices
+        .product-card-prices__price._new 3 390 ₽
+        .product-card-prices__price._old 6 666 ₽
+        p.product-card-prices__text Цена для интернет-магазина  и может отличаться от цены в шоу-руме
+
+      <!-- кнопки добавить в корзину / купить щас -->
+      .product-card-ctrl
+        .field-counter
+          .field-counter__minus -
+          .field-counter__plus +
+          input(type='text' value='0').field-face.field-counter__field-face
+
+        button(id='product_card_add_to_cart_btn').product-card-ctrl__btn.btn.btn--grey В корзину
+        button(id='product_card_buy_one_click_btn').product-card-ctrl__btn.btn.btn--black Купить сейчас
+      
+      <!-- вывод дополнительных параметров -->
+      ul.product-card-footer
+        li.product-card-footer__item
+          span Бренд  
+          p Razor MD.
+        li.product-card-footer__item
+          span Страна-производитель
+          p США
+        li.product-card-footer__item
+          span Объем
+          p 100 мл.
+
+<!-- худой баннер -->
+include ../components/form_thin.pug
+<!-- буллеты -->
+include ../components/bullets_default.pug
+<!-- также покупают -->
+include product_card_same.pug
+<!-- форма большая -->
+include ../components/form_x_mark.pug

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.5.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1">
   </head>
   <body>
@@ -21,14 +21,68 @@
         </div>
       </div>
     </header>
-    <section class="gui n-container">
-      <div class="btn btn--black">Черный border</div>
-      <div class="btn btn--white">Белый border</div>
-      <div class="btn btn--grey">Серая кнопка</div>
-      <div class="heading-title-l">Galoremen shop</div>
-      <div class="heading-title-m">Galoremen shop</div>
-      <div class="heading-title-s">Galoremen shop</div>
-    </section>
+    <section class="product-card">
+      <div class="n-container product-card__n-container">
+        <div class="product-card-galery">
+          <div class="product-card-galery__main">
+            <div class="swiper-wrapper"><img class="swiper-slide" src="./img/product_card/galery/1.jpg" alt=""><img class="swiper-slide" src="./img/product_card/galery/2.jpg" alt=""><img class="swiper-slide" src="./img/product_card/galery/1.jpg" alt=""><img class="swiper-slide" src="./img/product_card/galery/2.jpg" alt=""><img class="swiper-slide" src="./img/product_card/galery/1.jpg" alt=""><img class="swiper-slide" src="./img/product_card/galery/2.jpg" alt=""></div>
+          </div>
+          <div class="product-card-galery__tumbs">
+            <div class="swiper-wrapper"><img class="swiper-slide product-card-galery__tumb" src="./img/product_card/galery/1.jpg" alt=""><img class="swiper-slide product-card-galery__tumb" src="./img/product_card/galery/2.jpg" alt=""><img class="swiper-slide product-card-galery__tumb" src="./img/product_card/galery/1.jpg" alt=""><img class="swiper-slide product-card-galery__tumb" src="./img/product_card/galery/2.jpg" alt=""><img class="swiper-slide product-card-galery__tumb" src="./img/product_card/galery/1.jpg" alt=""><img class="swiper-slide product-card-galery__tumb" src="./img/product_card/galery/2.jpg" alt=""></div>
+          </div>
+        </div><!-- правая часть -->
+        <div class="product-card-main">
+          <div class="product-card__name">Восстанавливающий гель для кожи вокруг глаз London Grooming, 30 мл</div><img class="product-card__brand-img" src="./img/product_card/product_card_brand_test.png" alt="Название бренда">
+          <div class="product-card-content">
+            <div class="product-card-tabs">
+              <div class="product-card-tab" product-tab="1">Описание</div>
+              <div class="product-card-tab" product-tab="2">Характеристики</div>
+              <div class="product-card-tab" product-tab="3">Применение</div>
+            </div>
+            <div class="product-card-section" product-section="1">
+              <p class="product-card-section__text">Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой линейки косметики. </p>
+            </div>
+            <div class="product-card-section" product-section="2">
+              <p class="product-card-section__text">Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице.</p>
+            </div>
+            <div class="product-card-section" product-section="3">
+              <p class="product-card-section__text">Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния.</p>
+            </div>
+          </div><!-- дисплеить, если товар ессь в наличии --><span class="product-card-amount">В наличии</span><!-- старая и новая цены -->
+          <div class="product-card-prices">
+            <div class="product-card-prices__price _new">3 390 ₽</div>
+            <div class="product-card-prices__price _old">6 666 ₽</div>
+            <p class="product-card-prices__text">Цена для интернет-магазина  и может отличаться от цены в шоу-руме</p>
+          </div><!-- кнопки добавить в корзину / купить щас -->
+          <div class="product-card-ctrl">
+            <div class="field-counter">
+              <div class="field-counter__minus">-</div>
+              <div class="field-counter__plus">+</div>
+              <input class="field-face field-counter__field-face" type="text" value="0">
+            </div>
+            <button class="product-card-ctrl__btn btn btn--grey" id="product_card_add_to_cart_btn">В корзину</button>
+            <button class="product-card-ctrl__btn btn btn--black" id="product_card_buy_one_click_btn">Купить сейчас</button>
+          </div><!-- вывод дополнительных параметров -->
+          <ul class="product-card-footer">
+            <li class="product-card-footer__item"><span>Бренд  </span>
+              <p>Razor MD.</p>
+            </li>
+            <li class="product-card-footer__item"><span>Страна-производитель</span>
+              <p>США</p>
+            </li>
+            <li class="product-card-footer__item"><span>Объем</span>
+              <p>100 мл.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section><!-- худой баннер -->
+    <section class="form-thin">
+      <div class="n-container form-thin__n-container">
+        <p class="form-thin__offer">Возможно, ты не понял о чем это мы… Жми на кнопку — все расскажем!</p>
+        <button class="form-thin__btn btn btn--grey">Задать вопрос</button>
+      </div>
+    </section><!-- буллеты -->
     <section class="bullets">
       <ul class="n-container bullets__n-container">
         <li class="bullets-item bullets-item--default">
@@ -56,118 +110,21 @@
           </div>
         </li>
       </ul>
-    </section>
-    <section class="bullets">
-      <ul class="n-container bullets__n-container">
-        <li class="bullets-item bullets-item--bold">
-          <div class="x-mark-64"></div>
-          <div class="bullets-item__col"><span class="bullets-item__title">11</span>
-            <p>эксклюзивных брендов из США и Европы</p>
+    </section><!-- также покупают -->
+    <section class="product-same">
+      <div class="n-container product-same__n-container">
+        <div class="product-same__title">Тоже покупают / Рекомендуем</div>
+        <div class="product-same-slider">
+          <div class="product-same-slider__btns">
+            <div class="product-same-slider__btn" prev>prev</div>
+            <div class="product-same-slider__btn" next>next</div>
           </div>
-        </li>
-        <li class="bullets-item bullets-item--bold">
-          <div class="x-mark-64"></div>
-          <div class="bullets-item__col"><span class="bullets-item__title">30+</span>
-            <p>технологов и амбассадоров в России и СНГ</p>
+          <div class="product-same-slider__wrap">
+            <div class="swiper-wrapper"><a class="product-same-item swiper-slide" href="" target="_blank"><img class="product-same-item__img" src="./img/product_card/same/1.png" alt=""><span class="product-same-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="product-same-item__available">В наличии</span><span class="product-same-item__price">3 990 ₽</span></a><a class="product-same-item swiper-slide" href="" target="_blank"><img class="product-same-item__img" src="./img/product_card/same/1.png" alt=""><span class="product-same-item__name">Паста сильной фиксации с легким блеском SATIN</span><span class="product-same-item__available">В наличии</span><span class="product-same-item__price">3 990 ₽</span></a><a class="product-same-item swiper-slide" href="" target="_blank"><img class="product-same-item__img" src="./img/product_card/same/1.png" alt=""><span class="product-same-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="product-same-item__available">В наличии</span><span class="product-same-item__price">3 990 ₽</span></a><a class="product-same-item swiper-slide" href="" target="_blank"><img class="product-same-item__img" src="./img/product_card/same/1.png" alt=""><span class="product-same-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="product-same-item__available">В наличии</span><span class="product-same-item__price">3 990 ₽</span></a><a class="product-same-item swiper-slide" href="" target="_blank"><img class="product-same-item__img" src="./img/product_card/same/1.png" alt=""><span class="product-same-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="product-same-item__available">В наличии</span><span class="product-same-item__price">3 990 ₽</span></a></div>
           </div>
-        </li>
-        <li class="bullets-item bullets-item--bold">
-          <div class="x-mark-64"></div>
-          <div class="bullets-item__col"><span class="bullets-item__title">300+</span>
-            <p>Заключенных партнерских соглашений</p>
-          </div>
-        </li>
-        <li class="bullets-item bullets-item--bold">
-          <div class="x-mark-64"></div>
-          <div class="bullets-item__col"><span class="bullets-item__title">7000+</span>
-            <p>Система лояльности для постоянных клиентов</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section class="bullets">
-      <ul class="n-container bullets__n-container">
-        <li class="bullets-item bullets-item--thin">
-          <div class="bullets-item__num">01</div>
-          <div class="bullets-item__col"><span class="bullets-item__title">Оставьте вопрос</span>
-            <p>Просто оставьте свой email или позвоните по телефону 8 (812) 566 66 50</p>
-          </div>
-        </li>
-        <li class="bullets-item bullets-item--thin">
-          <div class="bullets-item__num">02</div>
-          <div class="bullets-item__col"><span class="bullets-item__title">Консультация</span>
-            <p>С вами свяжется менеджер для обсуждения условий партнерства</p>
-          </div>
-        </li>
-        <li class="bullets-item bullets-item--thin">
-          <div class="bullets-item__num">03</div>
-          <div class="bullets-item__col"><span class="bullets-item__title">Заключение договора</span>
-            <p>Мы подберем для вас индивидуальную схему партнерства</p>
-          </div>
-        </li>
-        <li class="bullets-item bullets-item--thin">
-          <div class="bullets-item__num">04</div>
-          <div class="bullets-item__col"><span class="bullets-item__title">Поставка продукции</span>
-            <p>Сроки поставки от 1-го дня, но зависят от вашего местоположения</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section class="paragraph">
-      <div class="n-container paragraph__n-container">
-        <div class="x-mark-64 paragraph__x-mark-64"></div>
-        <div class="x-mark-64 paragraph__x-mark-64"></div>
-        <div class="paragraph__col">
-          <h4 class="paragraph__title">Мужская косметика и аксессуары</h4>
-          <p class="paragraph__text">Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой линейки косметики.</p>
-          <p class="paragraph__text">Актуальные цены на мужскую косметику для бороды в Санкт-Петербурге и Москве представлены в каталоге интернет-магазина. Оформив покупку на нашем сайте, вы получаете оригинальные сертифицированные средства премиального качества.</p>
         </div>
       </div>
-    </section>
-    <section class="paragraph">
-      <div class="n-container paragraph__n-container">
-        <div class="x-mark-64 paragraph__x-mark-64"></div>
-        <div class="x-mark-64 paragraph__x-mark-64"></div>
-        <div class="paragraph__col">
-          <p class="paragraph__text-bold">Мы будем рады, если именно Вы решите сотрудничать с нами. Барбершоп, парикмахерская или салон красоты, к каждому партнеру индивидуальный подход. Мы убеждены, что именно в этом секрет успеха.</p>
-        </div>
-      </div>
-    </section>
-    <section class="link-x1">
-      <div class="n-container link-x1__n-container">
-        <div class="heading-title-l">Galore Shop</div><a class="link-x1-link" href="">
-          <div class="link-x1-link__wrap"><img src="/img/big/galore_shop_link_bg.jpg" alt=""></div>
-          <div class="link-x1__footer">Розничный каталог продукции</div></a>
-      </div>
-    </section>
-    <section class="link-x2">
-      <div class="n-container link-x2__n-container">
-        <div class="heading-title-l">Делай бизнес <br> с Galor</div>
-        <div class="link-x2__row"><a class="link-x2-link" href="">
-            <div class="link-x2-link__wrap"><img src="/img/big/galore_business_link_bg.jpg" alt=""></div>
-            <div class="link-x2__footer">Как стать партнером</div></a><a class="link-x2-link" href="">
-            <div class="link-x2-link__wrap"><img src="/img/big/galore_amba_link_bg.jpg" alt=""></div>
-            <div class="link-x2__footer">Амбассадоры galor</div></a></div>
-      </div>
-    </section>
-    <section class="link-x6">
-      <div class="n-container link-x6__n-container">
-        <div class="heading-title-l">Сosmetics <br> & accessories <br> for men</div>
-        <div class="link-x6__row"><a class="link-x6-link" href="">
-            <div class="link-x6-link__wrap"><img src="/img/big/link_x6_bg.jpg" alt=""></div>
-            <div class="link-x6__footer">Уход за бородой и усами</div></a><a class="link-x6-link" href="">
-            <div class="link-x6-link__wrap"><img src="/img/big/link_x6_bg.jpg" alt=""></div>
-            <div class="link-x6__footer">Аксессуары</div></a><a class="link-x6-link" href="">
-            <div class="link-x6-link__wrap"><img src="/img/big/link_x6_bg.jpg" alt=""></div>
-            <div class="link-x6__footer">Уход за лицом и телом</div></a><a class="link-x6-link" href="">
-            <div class="link-x6-link__wrap"><img src="/img/big/link_x6_bg.jpg" alt=""></div>
-            <div class="link-x6__footer">Все для бриться</div></a><a class="link-x6-link" href="">
-            <div class="link-x6-link__wrap"><img src="/img/big/link_x6_bg.jpg" alt=""></div>
-            <div class="link-x6__footer">Уход за волосами</div></a><a class="link-x6-link" href="">
-            <div class="link-x6-link__wrap"><img src="/img/big/link_x6_bg.jpg" alt=""></div>
-            <div class="link-x6__footer">Парфюм</div></a></div>
-      </div>
-    </section>
+    </section><!-- форма большая -->
     <form class="form-x" action="">
       <div class="n-container form-x__n-container">
         <div class="form-x__title">Все, что будет написано здесь для оптовиков, бросится в глаза</div>
@@ -251,6 +208,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="application/javascript" src="./js/jquery.fancybox.min.js"></script>
-    <script type="application/javascript" src="./js/swiper.min.js"></script>
+    <script type="application/javascript" src="./js/swiper.5.min.js"></script>
+    <script type="application/javascript" src="./js/product_card.js"></script>
   </body>
 </html>
