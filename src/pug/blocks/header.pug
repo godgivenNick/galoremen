@@ -1,5 +1,37 @@
 header.header
     .header-top
+      <!-- Левая часть -->
+      .header-top__left
+        a(href='').header-top-geo
+          //- <svg class="header-top-icon __geo">
+          //-   <use xlink:href="#geo"></use>
+          //- </svg>
+          span Санкт-Петербург
+        p.header-top__address ТК Гарден Сити, Лахтинский проспект 85Б, 2 этаж
+
+      <!-- Правая часть -->
+      .header-top__right
+        .header-top__btns
+          a.header-top__btn
+            <svg class="header-top-icon __search">
+              <use xlink:href="#compare"></use>
+            </svg>
+          //- a.header-top__btn
+          //-   <svg class="header-top-icon __heart">
+          //-     <use xlink:href="#heart_empty"></use>
+          //-   </svg>
+          //- a.header-top__btn
+          //-   <svg class="header-top-icon __compare">
+          //-     <use xlink:href="#compare"></use>
+          //-   </svg>
+          //- a.header-top__btn
+          //-   <svg class="header-top-icon __cart">
+          //-     <use xlink:href="#cart"></use>
+          //-   </svg>
+
+
+
+    <!-- Основное меню и пр. * Необходимо проставить пути в меню и для кнопки "Бизнес с Galore" -->
     .header-main
         .n-container.header-main__n-container
             .header-main__logo

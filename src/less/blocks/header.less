@@ -12,6 +12,76 @@
 }
 
 
+/*  Header top  */
+.header-top {
+  width: 100%;
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 64px;
+
+  &-icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--galore_grey_light);
+    
+    transition: .2s ease;
+
+    &.__geo {
+      width: 16px;
+      height: 16px;
+      fill: var(--galore_grey_light);
+      &:hover { fill: black; }
+    }
+
+  }
+
+  //  Левая часть
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+
+
+  &-geo {
+    display: flex;
+    align-items: center;
+
+    position: relative ; // для выпадашки с городами
+    
+    span {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.78;
+      text-align: left;
+      color: var(--galore_blue);
+
+      margin-left: 8px;
+    }
+  }
+
+  &__address {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.14px;
+    text-align: left;
+    color: var(--galore_grey_dark);
+
+    margin-left: 72px;
+  }
+  
+}
+
+
+/*  END Header top  */
+
+
 /* header-main */
 .header-main {
     width: 100%;
