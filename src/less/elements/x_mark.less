@@ -26,3 +26,34 @@
         transform: rotate(45deg);
     }
 }
+
+
+//
+.x-mark-160 {
+    width: 160px;
+    height: 160px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+
+        width: 190px;
+        height: 40px;
+        background-color: var(--galore_grey_lighter);
+
+        position: absolute;
+        right: -16px;
+        top: calc(50% - 20px);
+    }
+
+    &::before {
+        transform-origin: center center;
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        transform-origin: center center;
+        transform: rotate(45deg);
+    }
+}

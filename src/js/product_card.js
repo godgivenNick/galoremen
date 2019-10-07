@@ -142,6 +142,24 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
+  //  [ 6 ] Просмотренные товары 
+
+  var viewed_list = document.querySelector('.product-viewed__list');
+  var viewed_list_items = Array.from(viewed_list.querySelectorAll('.product-viewed-item'));
+
+  if(viewed_list_items.length < 3){
+
+    var default_item_html = `
+      <div class="product-viewed-item _empty">
+        <div class="x-mark-160"></div>
+      </div>
+    `;
+
+    for(let i=0; i < 3 - +viewed_list_items.length; i++){
+      viewed_list.innerHTML += default_item_html;
+    }
+
+  }
 
 
 

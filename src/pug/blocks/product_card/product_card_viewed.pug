@@ -1,0 +1,18 @@
+section.product-viewed
+    .n-container.product-viewed__n-container
+        .product-viewed__title.heading-title-l Просмотренные
+        
+        <!-- вывод просмотренных товаров * если просмотрено меньше 3х товаров, на js дорисовываю пустые карточки; ** если просмотрено больше 3х товаров, 4 и последующие переносятся на новую строку, но лучше, наверное, не выводить больше 3х. -->
+        .product-viewed__list
+            a(href='').product-viewed-item
+                img(src="./img/product_card/viewed/1.png", alt="")
+                .product-viewed-item__col
+                    p.product-viewed-item__name Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл
+                    span.product-viewed-item__aviability В наличии
+                    .product-viewed-item__prices
+                        span.product-viewed-item__price 3 990 ₽ 
+                        span.product-viewed-item__price._old 5 990 ₽
+            //- .product-viewed-item._empty
+            //-     .x-mark-160
+            //- .product-viewed-item._empty
+            //-     .x-mark-160

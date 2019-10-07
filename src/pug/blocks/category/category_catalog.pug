@@ -1,0 +1,75 @@
+section.category-catalog#category_catalog
+    .n-container.category-catalog__n-container
+
+        <!-- Фильтр -->
+        .category-catalog-filter
+            .category-catalog-filter__tabs
+                .category-catalog-filter__tab(filter-tab='1')._active Бренд
+                .category-catalog-filter__tab(filter-tab='2') Тип продукта
+                .category-catalog-filter__tab(filter-tab='3') Цена
+                .category-catalog-filter__tab(filter-tab='4') Страна производитель
+
+            .category-catalog-filter__filters(filter-id='1')._active
+                label(for='ch').category-catalog-filter__checkbox
+                    input(type="checkbox" checked='true' name='ch')
+                    span London Grooming
+                label(for='ch').category-catalog-filter__checkbox
+                    input(type="checkbox" name='ch')
+                    span London Grooming
+                label.category-catalog-filter__checkbox
+                    input(type="checkbox")
+                    span Ruger
+                label.category-catalog-filter__checkbox
+                    input(type="checkbox")
+                    span Greham Hill
+
+        <!-- Каталог -->
+        .category-catalog__list
+
+            <!-- Карточка товара -->
+            .category-catalog-item
+                .category-catalog-item__header иконки
+                .category-catalog-item__img
+                    img(src="./img/category/galery/1.png", alt="")
+                a(href='' target='_blank').category-catalog-item__name Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл
+                span.category-catalog-item__aviability В наличии
+                .category-catalog-item__prices
+                    span.category-catalog-item__price 3 990 ₽ 
+                    span.category-catalog-item__price._old 6 990 ₽
+                button.category-catalog-item__btn В корзину
+
+            .category-catalog-item
+                .category-catalog-item__header иконки
+                .category-catalog-item__img
+                    img(src="./img/category/galery/1.png", alt="")
+                a(href='' target='_blank').category-catalog-item__name Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл
+                span.category-catalog-item__aviability В наличии
+                .category-catalog-item__prices
+                    span.category-catalog-item__price 3 990 ₽ 
+                    span.category-catalog-item__price._old 6 990 ₽
+                button.category-catalog-item__btn В корзину
+
+            .category-catalog-item
+                .category-catalog-item__header иконки
+                .category-catalog-item__img
+                    img(src="./img/category/galery/1.png", alt="")
+                a(href='' target='_blank').category-catalog-item__name Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл
+                span.category-catalog-item__aviability В наличии
+                .category-catalog-item__prices
+                    span.category-catalog-item__price 3 990 ₽ 
+                    span.category-catalog-item__price._old 6 990 ₽
+                button.category-catalog-item__btn В корзину
+
+            .category-catalog-item
+                .category-catalog-item__header иконки
+                .category-catalog-item__img
+                    img(src="./img/category/galery/1.png", alt="")
+                a(href='' target='_blank').category-catalog-item__name Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл
+                span.category-catalog-item__aviability В наличии
+                .category-catalog-item__prices
+                    span.category-catalog-item__price 3 990 ₽ 
+                    span.category-catalog-item__price._old 6 990 ₽
+                button.category-catalog-item__btn В корзину
+
+        <!-- Кнопка "Показать еще" -->
+        button.category-catalog__show-more-btn.btn.btn--black Показать еще N
