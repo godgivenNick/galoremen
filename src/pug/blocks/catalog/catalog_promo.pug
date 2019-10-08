@@ -1,8 +1,16 @@
 section.catalog-promo
     .n-container.catalog-promo__n-container
+        <!-- Ниже заголовки и текста - не знаю какие для них нужно было проставить теги, поэтому сделал дивами на время, чтоб ниче не напутать -->
         .catalog-promo__content
             .catalog-promo__title.heading-title-l Сosmetic’s & accessorie’s
             .catalog-promo__sub-title Мужская косметика и аксессуары
             .catalog-promo__text Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой линейки косметики.
-        //- .category-promo__x-mark
-        include ../components/x_mark/x_mark_svg_default.pug
+        //- include ../components/x_mark/x_mark_svg_default.pug
+        <div class='x_mark_svg'>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="816" viewBox="0 0 816 816">
+                <clipPath id="test">
+                    <path id="Union_20" data-name="Union 20" d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z" opacity="0.5" fill="url(#linear-gradient)"/>
+                </clipPath>
+                <image width="890" height="890" href="./img/catalog/catalog_x_mark_img.jpg" clip-path="url(#test)" x='0px' y='-10px' />
+            </svg>
+        </div>

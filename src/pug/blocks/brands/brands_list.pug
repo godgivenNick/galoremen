@@ -1,0 +1,25 @@
+mixin brand(src, src_logo)
+    a(href='').brands-list-item
+        img(src=src, alt="").brands-list-item__img
+        .brands-list-item__logo
+            img(src=src_logo, alt="")
+
+section.brands-list
+    .n-container.brands-list__n-container
+        +brand('./img/brands/list/london.png', './img/brands/list/london_logo.png')
+        +brand('./img/brands/list/solomons.png', './img/brands/list/solomons_logo.png')
+        +brand('./img/brands/list/tomb_45.png', './img/brands/list/tomb_45_logo.png')
+
+        +brand('./img/brands/list/chicago.png', './img/brands/list/chicago_logo.png')
+        +brand('./img/brands/list/menspire.png', './img/brands/list/menspire_logo.png')
+        +brand('./img/brands/list/pacinos.png', './img/brands/list/pacinos_logo.png')
+
+        +brand('./img/brands/list/bona.png', './img/brands/list/bona_logo.png')
+        +brand('./img/brands/list/fheads.png', './img/brands/list/fheads_logo.png')
+        +brand('./img/brands/list/default.png', './img/brands/list/fulton_logo.png')
+
+        +brand('./img/brands/list/default.png', './img/brands/list/ashland_logo.png')
+        +brand('./img/brands/list/default.png', './img/brands/list/m_logo.png')
+        +brand('./img/brands/list/default.png', './img/brands/list/razor_logo.png')
+
+        +brand('./img/brands/list/default.png', './img/brands/list/ruger_logo.png')

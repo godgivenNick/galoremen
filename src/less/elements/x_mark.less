@@ -28,6 +28,36 @@
 }
 
 
+.x-mark-64--min {
+    width: 56px;
+    height: 56px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+
+        width: 32px;
+        height: 8px;
+        background-color: var(--galore_grey_dark);
+
+        position: absolute;
+        right: 11px;
+        top: calc(50% - 4px);
+    }
+
+    &::before {
+        transform-origin: center center;
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        transform-origin: center center;
+        transform: rotate(45deg);
+    }
+}
+
+
 //
 .x-mark-160 {
     width: 160px;

@@ -2,41 +2,61 @@ header.header
     .header-top
       <!-- Левая часть -->
       .header-top__left
+
+        <!-- тут, судя по всему, выбор города. Ебнем потом выпадашку со списком городов -->
         a(href='').header-top-geo
-          //- <svg class="header-top-icon __geo">
-          //-   <use xlink:href="#geo"></use>
-          //- </svg>
+          <svg class="header-top-icon __geo">
+            <use xlink:href="#geo"></use>
+          </svg>
           span Санкт-Петербург
+
+        <!-- Адрес компании -->
         p.header-top__address ТК Гарден Сити, Лахтинский проспект 85Б, 2 этаж
 
       <!-- Правая часть -->
       .header-top__right
         .header-top__btns
+
+          a(href='tel:88125666650').header-top-tel
+            <svg class="header-top-icon __tel">
+              <use xlink:href="#tel"></use>
+            </svg>
+            span 8 (812) 566 66 50
+
+          <!-- Привязать событие всплывашки с обратным звонком -->
+          a().header-top__btn-cta Заказать звонок
+
+          <!-- Поиск по сайту -->
           a.header-top__btn
             <svg class="header-top-icon __search">
+              <use xlink:href="#search"></use>
+            </svg>
+
+          <!-- Сравнение товаров -->
+          a(href='').header-top__btn
+            <svg class="header-top-icon __compare">
               <use xlink:href="#compare"></use>
             </svg>
-          //- a.header-top__btn
-          //-   <svg class="header-top-icon __heart">
-          //-     <use xlink:href="#heart_empty"></use>
-          //-   </svg>
-          //- a.header-top__btn
-          //-   <svg class="header-top-icon __compare">
-          //-     <use xlink:href="#compare"></use>
-          //-   </svg>
-          //- a.header-top__btn
-          //-   <svg class="header-top-icon __cart">
-          //-     <use xlink:href="#cart"></use>
-          //-   </svg>
 
+          <!-- Понравившееся -->
+          a(href='').header-top__btn
+            <svg class="header-top-icon __heart">
+              <use xlink:href="#heart_empty"></use>
+            </svg>
 
+          <!-- Корзина -->
+          a(href='').header-top__btn
+            <svg class="header-top-icon __cart">
+              <use xlink:href="#cart"></use>
+            </svg>
 
-    <!-- Основное меню и пр. * Необходимо проставить пути в меню и для кнопки "Бизнес с Galore" -->
+    <!-- Основное меню и пр. -->
+    <!-- * Необходимо проставить пути в меню и для кнопки "Бизнес с Galore"  -->
     .header-main
         .n-container.header-main__n-container
             .header-main__logo
                 a(href='/' title='Galoremen.ru')
-                    img(src="/img/svg/logo_black.svg", alt="Galoremen.ru")
+                    img(src="./img/svg/logo_black.svg", alt="Galoremen.ru")
                 span.header-main__logo-desc Эксклюзивный дистрибьютор редкой мужской косметики.
             nav.header-nav
                 a(href='') Каталог

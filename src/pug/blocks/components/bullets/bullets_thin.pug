@@ -1,0 +1,30 @@
+mixin bullet_thin(title, text)
+    li.bullets-item.bullets-item--thin
+        .bullets-item__num 01
+        .bullets-item__col
+            span.bullets-item__title= title
+            p= text
+
+mixin bullets_thin
+    section.bullets
+        ul.n-container.bullets__n-container
+            +bullet_thin('Оставьте вопрос', 'Просто оставьте свой email или позвоните по телефону 8 (812) 566 66 50')
+            +bullet_thin('Консультация', 'С вами свяжется менеджер для обсуждения условий партнерства')
+            +bullet_thin('Заключение договора', 'Мы подберем для вас индивидуальную схему партнерства')
+            +bullet_thin('Поставка продукции', 'Сроки поставки от 1-го дня, но зависят от вашего местоположения')
+
+        //- li.bullets-item.bullets-item--thin
+        //-     .bullets-item__num 02
+        //-     .bullets-item__col
+        //-         span.bullets-item__title Консультация
+        //-         p С вами свяжется менеджер для обсуждения условий партнерства
+        //- li.bullets-item.bullets-item--thin
+        //-     .bullets-item__num 03
+        //-     .bullets-item__col
+        //-         span.bullets-item__title Заключение договора
+        //-         p Мы подберем для вас индивидуальную схему партнерства
+        //- li.bullets-item.bullets-item--thin
+        //-     .bullets-item__num 04
+        //-     .bullets-item__col
+        //-         span.bullets-item__title Поставка продукции
+        //-         p Сроки поставки от 1-го дня, но зависят от вашего местоположения

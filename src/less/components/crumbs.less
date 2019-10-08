@@ -1,0 +1,59 @@
+.crumbs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 28px;
+    padding-bottom: 28px;
+    
+    &__n-container {
+        align-items: center;
+    }
+
+
+    &__btn {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 1.2px;
+        text-align: center;
+        color: var(--galore_grey_middle);
+
+        text-transform: uppercase;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        transition: .2s ease;
+
+        &:hover {
+            color: var(--galore_grey_dark);
+        }
+
+        &:not(:last-child) {
+            margin-right: 8px;
+            padding-right: 8px;
+
+            &::after {
+                content: '';
+
+                height: 16px;
+                width: 1px;
+                background-color: var(--galore_grey_light);
+
+                position: absolute;
+                top: -2px;
+                right: 0;
+            }
+        }
+
+
+        &._current {
+            color: var(--galore_grey_dark);
+        }
+    }
+}
