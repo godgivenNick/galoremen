@@ -1,0 +1,18 @@
+mixin amb(name, desc, src)
+    a(href='').ambs-list-item
+        img(src=src, alt="").ambs-list-item__img
+        .ambs-list-item__footer
+          .ambs-list-item__name= name
+          .ambs-list-item__desc= desc
+
+section.ambs-list
+    .n-container.ambs-list__n-container
+      +amb('Геральт', '10 месяцев не пьет', './img/ambs/list/ambs_example.png')
+      +amb('Бермуд', 'Коллекционирует треугольники', './img/ambs/list/ambs_example.png')
+      +amb('Геральт', '10 месяцев не пьет', './img/ambs/list/ambs_example.png')
+      +amb('Бермуд', 'Коллекционирует треугольники', './img/ambs/list/ambs_example.png')
+      +amb('Геральт', '10 месяцев не пьет', './img/ambs/list/ambs_example.png')
+      +amb('Бермуд', 'Коллекционирует треугольники', './img/ambs/list/ambs_example.png')
+      +amb('Геральт', '10 месяцев не пьет', './img/ambs/list/ambs_example.png')
+      +amb('Бермуд', 'Коллекционирует треугольники', './img/ambs/list/ambs_example.png')
+      +amb('Геральт', '10 месяцев не пьет', './img/ambs/list/ambs_example.png')

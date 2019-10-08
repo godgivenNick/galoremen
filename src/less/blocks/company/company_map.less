@@ -1,0 +1,94 @@
+.company-map {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 165px;
+  margin-bottom: 152px;
+
+
+  &__n-container {
+    padding: 0;
+    padding-top: 96px;
+    width: calc(100% - 260px);
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+
+    img {
+      z-index: -1;
+      position: absolute;
+
+      width: 100%;
+      height: auto;
+
+      top: 0;
+      left: 0;
+    }
+  }
+
+
+  &__title {
+
+    &._left {
+      margin-bottom: 64px;
+      text-align: left;
+
+      max-width: 676px;
+
+      order: 1;
+    }
+
+    &._right {
+      align-self: flex-end;
+      margin-top: 64px;
+      text-align: right;
+
+      max-width: 957px;
+
+      order: 3;
+    }
+
+  }
+
+
+  &__list {
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 25%;
+      margin-bottom: 16px;
+      padding-right: 16px;
+      padding-left: 16px;
+
+      font-family: 'Roboto', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1;
+      text-align: left;
+      color: var(--galore_grey_dark);
+
+      position: relative;
+      &::before {
+          content: '';
+
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+
+          background-color: var(--galore_grey_dark);
+
+          position: absolute;
+          left: 0;
+          top: 12px;
+      }
+    }
+  }
+}

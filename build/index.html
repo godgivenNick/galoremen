@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/swiper.5.min.css"><!-- Для верстки -->
+    <link rel="stylesheet" type="text/css" href="css/swiper.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css"><!-- Для верстки -->
     <link rel="stylesheet" type="text/css" href="css/style.css?v=1"><!-- Подключение общих для всех страниц стилей -->
 <!-- Стили для стр. "Каталог" -->
   </head>
@@ -68,72 +69,123 @@
         </div>
       </div>
     </header><!-- Главный блок, внутри которого все блоки для страницы (без header'а и footer'а) -->
-    <main class="main"><!-- Brands --><!-- Хлебные крошки -->
+    <main class="main"><!-- Company --><!-- Хлебные крошки -->
       <div class="crumbs">
         <div class="n-container crumbs__n-container"><!-- Для крошки текущей страницы добавляем класс '_current' --><a class="crumbs__btn" href="">< Назад</a><a class="crumbs__btn" href="">Главная</a><a class="crumbs__btn _current" href="">Каталог</a></div>
       </div><!-- Первый экран -->
-      <section class="brands-promo">
-        <div class="n-container brands-promo__n-container"><!-- Ниже заголовки и текста - не знаю какие для них нужно было проставить теги, поэтому сделал дивами на время, чтоб ниче не напутать -->
-          <div class="brands-promo__content">
-            <div class="brands-promo__title heading-title-l">Brand’s</div>
-            <div class="brands-promo__sub-title">Фирменная продукция оптом и в розницу</div>
-            <div class="brands-promo__text">Мы являемся официальным дилером представленных торговых марок — никакого «серого» импорта, только эксклюзив. На все товары распространяется фирменная гарантия, а цены в нашем магазине соответствуют рекомендованным производителем.</div>
-            <p class="brands-promo__sub-title">Оставь свою почту и получи единый каталог всех брендов</p><!-- Форма -->
-            <form class="brands-promo__form" action="">
-              <input class="field-face" type="email" placeholder="Email">
-              <button class="btn btn--black" type="submit">Отправить</button>
-            </form>
+      <section class="company-promo"><!-- Слева -->
+        <div class="n-container company-promo__n-container company-promo__n-container--left"><!-- Ниже заголовки и текста - не знаю какие для них нужно было проставить теги, поэтому сделал дивами на время, чтоб ниче не напутать -->
+          <div class="company-promo__content">
+            <div class="company-promo__title heading-title-l">Galore Co.</div>
+            <div class="company-promo__sub-title">История компании</div>
+            <div class="company-promo__text">История началась в 2014 году с американских расчесок «Chicago Comb» – лучших в мире расчесок высшего качества, элегантных и вне времени изящных. Вдохновившись таким подходом к делу, мы отобрали только лучшие мужские косметические бренды. Сейчас в нашем ассортименте 11 брендов из Великобритании, Италии, Германии и США с богатой историей и продуктами отличного качества.</div>
+            <div class="company-promo__text">Компания Galor занимается продажей косметики и аксессуаров как для барбершопов, парикмахерских и салонов красоты, так и для всех мужчин, которые знают толк в уходе за собой. </div>
+            <div class="company-promo__text">Мы являемся эксклюзивным дистрибьютором редких нишевых брендов мужской косметики, таких как London Grooming, Solomon’s, Graham Hill, Pacinos и многих других. </div>
           </div><div class='x_mark_svg'>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="816" viewBox="0 0 816 816">
+<defs>
+<linearGradient id="linear-gradient" x1="0.102" y1="0.898" x2="0.889" y2="0.111" gradientUnits="objectBoundingBox">
+<stop offset="0" stop-color="#e89f28"/>
+<stop offset="1" stop-color="#00b8df"/>
+</linearGradient>
+</defs>
 <clipPath id="test">
-<path id="Union_20" data-name="Union 20" d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z" opacity="0.5" fill="url(#linear-gradient)"/>
+<path id="Union_22" data-name="Union 22" d="M408,244.8,163.2,0,0,163.2,244.8,408,0,652.8,163.2,816,408,571.2,652.8,816,816,652.8,571.2,408,816,163.2,652.8,0Z" opacity="0.5" fill="url(#linear-gradient)"/>
 </clipPath>
-<image width="1141" height="911" href="./img/brands/brands_x_mark_img.png" clip-path="url(#test)" x='-50px' y='0px' />
+<image width="1024" height="1024" href="./img/company/company_x_mark_1.png" clip-path="url(#test)" x='-25px' y='-50px' />
+<path id="Union_22" data-name="Union 22" d="M408,244.8,163.2,0,0,163.2,244.8,408,0,652.8,163.2,816,408,571.2,652.8,816,816,652.8,571.2,408,816,163.2,652.8,0Z" opacity="0.5" fill="url(#linear-gradient)"/>
+</svg>
+</div>
+        </div><!-- Справа -->
+        <div class="n-container company-promo__n-container company-promo__n-container--right"><!-- Ниже заголовки и текста - не знаю какие для них нужно было проставить теги, поэтому сделал дивами на время, чтоб ниче не напутать -->
+          <div class="company-promo__content">
+            <div class="company-promo__title heading-title-l">Work is Live</div>
+            <div class="company-promo__sub-title">Наши амбассадоры подходят делу с большой любовью. Ведь для них это – дело жизни.</div>
+            <div class="company-promo__text">Наша команда мастеров-технологов и амбассадоров  состоит из талантливых мастеров, которых объединяет любовь к общему делу, профессионализм и желание работать на высококачественной косметике.</div>
+            <div class="company-promo__text">Более того, мы активно сотрудничаем с известными барберами и академиями, проводим мастер-классы и обучения. </div>
+          </div><div class='x_mark_svg'>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="816" viewBox="0 0 816 816">
+<defs>
+<linearGradient id="linear-gradient-2" x1="0.102" y1="0.898" x2="0.889" y2="0.111" gradientUnits="objectBoundingBox">
+<stop offset="0" stop-color="#00b8df"/>
+<stop offset="1" stop-color="#e89f28"/>
+</linearGradient>
+</defs>
+<clipPath id="test">
+<path id="Union_22" data-name="Union 22" d="M408,244.8,163.2,0,0,163.2,244.8,408,0,652.8,163.2,816,408,571.2,652.8,816,816,652.8,571.2,408,816,163.2,652.8,0Z" opacity="0.5" fill="url(#linear-gradient-2)"/>
+</clipPath>
+<image width="1330" height="885" href="./img/company/company_x_mark_2.jpg" clip-path="url(#test)" x='-255px' y='-25px' />
+<path id="Union_22" data-name="Union 22" d="M408,244.8,163.2,0,0,163.2,244.8,408,0,652.8,163.2,816,408,571.2,652.8,816,816,652.8,571.2,408,816,163.2,652.8,0Z" opacity="0.5" fill="url(#linear-gradient-2)"/>
 </svg>
 </div>
         </div>
-      </section><!-- Список брендов -->
-      <section class="brands-list">
-        <div class="n-container brands-list__n-container"><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/london.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/london_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/solomons.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/solomons_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/tomb_45.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/tomb_45_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/chicago.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/chicago_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/menspire.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/menspire_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/pacinos.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/pacinos_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/bona.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/bona_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/fheads.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/fheads_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/default.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/fulton_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/default.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/ashland_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/default.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/m_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/default.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/razor_logo.png" alt=""></div></a><a class="brands-list-item" href=""><img class="brands-list-item__img" src="./img/brands/list/default.png" alt="">
-                  <div class="brands-list-item__logo"><img src="./img/brands/list/ruger_logo.png" alt=""></div></a>
+      </section><!-- Список городов с картой -->
+      <section class="company-map">
+        <div class="n-container company-map__n-container"><img src="./img/company/russia_map.png" alt="">
+          <div class="company-map__title heading-title-l _left">Более 85 магазинов по всей России</div>
+          <div class="company-map__title heading-title-l _right">А также в Украине, Белоруссии, Польше и других странах</div>
+          <ul class="company-map__list">
+            <li>Санкт-Петербург</li>
+            <li>Москва</li>
+            <li>Новосибирск</li>
+            <li>Екатеринбург</li>
+            <li>Нижний Новгород</li>
+            <li>Казань</li>
+            <li>Челябинск</li>
+            <li>Омск</li>
+            <li>Самара</li>
+            <li>Кемерово </li>
+            <li>Ростов-на-Дону</li>
+            <li>Уфа</li>
+            <li>Красноярск</li>
+            <li>Иркутск</li>
+            <li>Томск</li>
+            <li>Сочи</li>
+            <li>Тольятти</li>
+            <li>Брянск</li>
+            <li>Пермь</li>
+            <li>Краснодар</li>
+            <li>Воронеж</li>
+            <li>Волгоград</li>
+            <li>Хабаровск</li>
+            <li>Владивосток</li>
+          </ul>
         </div>
-      </section><!-- Большая форма с крестом -->
-      <form class="form-x" action="">
-        <div class="n-container form-x__n-container">
-          <div class="form-x__title">Все, что будет написано здесь для оптовиков, бросится в глаза</div>
-          <div class="form-x__text">Оставь заявку и получи возможность влиять на свое будущее. Без спама и рекламы — только мужские разговоры о бизнесе.</div>
-          <div class="form-x__row">
-            <div class="form-x__row">
-              <input class="field-face" type="text" placeholder="Оптовик Оптович">
-              <input class="field-face" type="email" placeholder="optovik@gmail.com">
-              <button class="btn btn--white">Подписаться</button>
+      </section><!-- Видео о компании -->
+      <section class="company-video">
+        <div class="n-container company-video__n-container">
+          <div class="company-video-bg"><!-- Подставить ссылку на YouTube --><a class="company-video__btn" href="https://www.youtube.com/embed/88Ord0X8b_E" data-fancybox>
+              <div class="company-video__icon"></div></a></div>
+        </div>
+      </section><!-- Буллеты -->
+      <section class="bullets">
+        <ul class="n-container bullets__n-container">
+          <li class="bullets-item bullets-item--bold">
+            <div class="x-mark-64"></div>
+            <div class="bullets-item__col"><span class="bullets-item__title">11</span>
+              <p>эксклюзивных брендов из США и Европы</p>
             </div>
-            <div class="form-x__col">
-              <p class="form-x__text-min">Отдел поддержки оптовых клиентов</p><a class="form-x__text-tel" href="tel:88125666650">8 (812) 566 66 50</a>
+          </li>
+          <li class="bullets-item bullets-item--bold">
+            <div class="x-mark-64"></div>
+            <div class="bullets-item__col"><span class="bullets-item__title">30+</span>
+              <p>технологов и амбассадоров в России и СНГ</p>
             </div>
-          </div>
-        </div><svg xmlns="http://www.w3.org/2000/svg" class='x-mark-azure' xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="816" viewBox="0 0 816 816">
-<defs>
-<linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-<stop offset="0" stop-color="#0ccfc4"/>
-<stop offset="1" stop-color="#066862"/>
-</linearGradient>
-</defs>
-<path id="Union_20" data-name="Union 20" d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z" opacity="0.5" fill="url(#linear-gradient)"/>
-</svg>
-      </form><!-- SEO-абзац -->
+          </li>
+          <li class="bullets-item bullets-item--bold">
+            <div class="x-mark-64"></div>
+            <div class="bullets-item__col"><span class="bullets-item__title">300+</span>
+              <p>Заключенных партнерских соглашений</p>
+            </div>
+          </li>
+          <li class="bullets-item bullets-item--bold">
+            <div class="x-mark-64"></div>
+            <div class="bullets-item__col"><span class="bullets-item__title">7000+</span>
+              <p>Система лояльности для постоянных клиентов</p>
+            </div>
+          </li>
+        </ul>
+      </section><!-- SEO-абзац -->
       <section class="paragraph">
         <div class="n-container paragraph__n-container">
           <div class="x-mark-64 paragraph__x-mark-64"></div>
@@ -214,6 +266,5 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="application/javascript" src="./js/jquery.fancybox.min.js"></script>
     <script type="application/javascript" src="./js/swiper.5.min.js"></script><!-- Скрипты для конкретных страниц -->
-    <script type="application/javascript" src="./js/brands.js"></script>
   </body>
 </html>

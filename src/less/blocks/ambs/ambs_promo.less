@@ -1,0 +1,81 @@
+.ambs-promo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  min-height: 680px;
+
+  &__n-container {
+      align-items: flex-start;
+      position: relative;
+  }
+
+  .x_mark_svg {
+    position: absolute;
+    right: 130px;
+    top: -225px;
+    z-index: -1;
+  }
+
+
+  &__content {
+      width: 100%;
+      max-width: 674px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      padding-top: 28px;
+      padding-bottom: 64px;
+  }
+
+  &__title {
+      text-align: left;
+      width: 100%;
+
+      margin-bottom: 64px;
+  }
+
+  &__sub-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.43;
+      text-align: left;
+      color: var(--galore_grey_dark);
+
+      width: 100%;
+      margin-bottom: 24px;
+  }
+
+  &__text {
+      font-family: 'Roboto', sans-serif;
+
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.56;
+      text-align: left;
+      color: var(--galore_grey_dark);
+
+      margin-bottom: 16px; //
+  }
+
+  
+  &__x-mark {
+      width: 816px;
+      height: 816px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // background: var(--galore_gradient_azure);
+
+      position: absolute;
+      right: 130px; /* не могу paddingi контейнера заменить на - ширину */
+      top: calc(0% - 130px - 32px - 48px ); /* 130 - шапка, 32 - еще чтуь выше, 48 - pagi */
+
+      z-index: -1;
+  }
+}
