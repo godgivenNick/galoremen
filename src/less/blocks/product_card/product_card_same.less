@@ -45,9 +45,13 @@
   }
 
   &__btn {
-
+  
     transition: .2s ease-out;
     cursor: pointer;
+
+    width: 73px;
+    height: 17px;
+    height: 33px;
 
     &:hover {
       &[prev] {
@@ -58,6 +62,40 @@
       }
     }
 
+
+    position: relative;
+
+    &[next]{
+      background: url('../img/svg/btn_next_arr.svg') no-repeat right center;
+      &::before {
+          content: '';
+
+          width: 71px;
+          height: 1px;
+
+          right: 1px;
+          top: 16px;
+
+          position: absolute;
+          background-color: var(--galore_black);
+      }
+    }
+
+    &[prev]{
+      background: url('../img/svg/btn_prev_arr.svg') no-repeat left center;
+      &::before {
+          content: '';
+
+          width: 71px;
+          height: 1px;
+
+          left: 1px;
+          top: 16px;
+
+          position: absolute;
+          background-color: var(--galore_black);
+      }
+    }
 
     &[prev] {
       margin-right: 30px;

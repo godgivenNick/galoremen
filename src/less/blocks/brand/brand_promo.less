@@ -1,0 +1,57 @@
+.brand-promo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    min-height: 680px;
+
+    &__n-container {
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .x_mark_svg {
+      position: absolute;
+      right: 130px;
+      top: -225px;
+      z-index: -1;
+    }
+
+
+    &__content {
+        width: 100%;
+        max-width: 674px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding-top: 28px;
+        padding-bottom: 64px;
+    }
+
+    &__title {
+        text-align: left;
+        width: 100%;
+
+        margin-bottom: 64px;
+    }
+
+    &__text {
+        font-family: 'Roboto', sans-serif;
+
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.56;
+        text-align: left;
+        color: var(--galore_grey_dark);
+
+        margin-bottom: 16px;
+
+        a {
+            transition: .2s ease;
+            text-decoration: underline;
+            &:hover { color: var(--galore_blue); }
+        }
+    }
+}

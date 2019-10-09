@@ -1,0 +1,118 @@
+.main-brands {
+    width: 100%;
+    justify-content: center;
+
+    margin-top: 152px;
+
+
+    &__n-container {
+        flex-direction: column;
+
+
+    }
+
+
+    &__title {
+        margin-bottom: 64px;
+        max-width: 700px;
+    }
+
+
+    &__slider {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .swiper-wrapper {
+            align-items: center;
+        }
+    }
+    
+    
+    &__wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+    &__item {
+        width: calc(100% / 4 - 90px / 4);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: auto;
+        }
+    }
+
+
+    &__btns {
+        order: 2;
+        display: flex;
+        align-items: center;
+    
+        // margin-top: 48px;
+      }
+    
+      &__btn {
+      
+        transition: .2s ease-out;
+        cursor: pointer;
+    
+        width: 73px;
+        height: 17px;
+        height: 33px;
+    
+        &:hover {
+          &[prev] {
+            transform: translateX(-20px);
+          }
+          &[next] {
+            transform: translateX(20px);
+          }
+        }
+    
+    
+        position: relative;
+    
+        &[next]{
+          background: url('../img/svg/btn_next_arr.svg') no-repeat right center;
+          &::before {
+              content: '';
+    
+              width: 71px;
+              height: 1px;
+    
+              right: 1px;
+              top: 16px;
+    
+              position: absolute;
+              background-color: var(--galore_black);
+          }
+        }
+    
+        &[prev]{
+          background: url('../img/svg/btn_prev_arr.svg') no-repeat left center;
+          &::before {
+              content: '';
+    
+              width: 71px;
+              height: 1px;
+    
+              left: 1px;
+              top: 16px;
+    
+              position: absolute;
+              background-color: var(--galore_black);
+          }
+        }
+    
+        &[prev] {
+          margin-right: 30px;
+        }
+      }
+}
+
