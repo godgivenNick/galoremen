@@ -49,3 +49,40 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1024px){
+
+    .amb-galery__item {
+        max-width: calc(50% - 15px);
+    }
+
+    .amb-galery__item:not(:nth-child(3n)) {
+        margin-right: 0;
+    }
+
+    .amb-galery__item:nth-child(odd) {
+        margin-right: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px){
+    .amb-galery {
+        padding-top: 88px;
+        padding-bottom: 88px;
+    }
+
+    .amb-galery__title {
+        margin-bottom: 32px;
+    }
+
+    .amb-galery__item:nth-child(odd) {
+        margin-right: 0;
+    }
+
+    .amb-galery__item {
+        max-width: 534px;
+    }
+}

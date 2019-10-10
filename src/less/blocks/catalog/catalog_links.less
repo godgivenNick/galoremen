@@ -114,3 +114,39 @@
         z-index: 10;
     }
 }
+
+
+
+
+
+@media screen and (max-width: 1024px){
+    .catalog-link {
+        width: calc(50% - 15px);
+    }
+
+    .catalog-link:not(:nth-child(3n+3)){
+        margin-right: 0;
+    }
+
+    .catalog-link:nth-child(odd) {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .catalog-link__footer {
+        font-size: 18px;
+        padding: 0 16px;
+        height: 72px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .catalog-link {
+        width: 100%;
+    }
+
+    .catalog-link:nth-child(odd) {
+        margin-right: 0px;
+    }
+}

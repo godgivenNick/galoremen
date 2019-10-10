@@ -55,3 +55,77 @@
         }
     }
 }
+
+
+
+/*   Адаптив   */
+
+
+@media screen and (max-width: 1600px){
+
+    .brand-promo {
+
+        &__n-container {
+            
+        }
+
+        .x_mark_svg {
+            transform: scale(.75);
+            right: -60px;
+            top: -70px;
+
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 1300px){
+
+    .brand-promo__content {
+        max-width: 536px;
+
+        padding: 0;
+    }
+
+
+    .brand-promo .x_mark_svg {
+        transform: scale(.5);
+        right: -164px;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px){
+
+    .brand-promo {
+        min-height: 0;
+        padding-bottom: 64px;
+    }
+
+    .brand-promo .x_mark_svg {
+        display: none;
+    }
+
+    .brand-promo__content {
+        max-width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    .brand-promo__title {
+        margin-bottom: 32px;
+    }
+
+    .brand-promo__sub-title {
+        margin-bottom: 20px;
+    }
+
+    .brand-promo__text {
+        margin-bottom: 32px;
+    }
+}

@@ -49,7 +49,7 @@
     }
 
     &__row {
-        // width: 100%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -90,9 +90,92 @@
     }
 
     input, button {
-        width: 393px;
+        width: 100%;
+        max-width: 393px;
         &:not(:last-child) {
             margin-right: 30px;
         }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1300px){
+
+    .form-x {
+        padding: 88px 0;
+    }
+
+    .form-x .x-mark-azure {
+        top: 0;
+        right: 0;
+    }
+
+    .form-x__n-container {
+
+        & > .form-x__row {
+            flex-wrap: wrap;
+            
+            .form-x__row {
+                margin-bottom: 30px;
+            }
+        }
+
+        .form-x__col {
+            margin-left: 0;
+            margin: 0 auto;
+        }
+
+    }
+
+    .form-x input,
+    .form-x button {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .form-x__title {
+        font-size: 40px;
+    }
+
+
+    .form-x__text {
+        font-size: 22px;
+        margin-bottom: 32px;
+    }
+
+
+    .form-x__n-container > .form-x__row .form-x__row {
+        flex-direction: column;
+    }
+
+    .form-x input:not(:last-child), .form-x button:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .form-x input,
+    .form-x button {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .form-x .x-mark-azure {
+        right: calc(50% - 408px);
+        bottom: 0;
+        top: auto;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .form-x__col {
+        flex-shrink: 1;
     }
 }

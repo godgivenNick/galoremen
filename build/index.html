@@ -39,247 +39,143 @@
 <path d="M11.34 8.253a7.629 7.629 0 0 1-2.353-.373.652.652 0 0 0-.673.16L7.267 9.353A10.122 10.122 0 0 1 2.673 4.8l1.3-1.107a.68.68 0 0 0 .16-.68A7.435 7.435 0 0 1 3.76.66.666.666 0 0 0 3.1 0H.793C.433 0 0 .16 0 .66A11.435 11.435 0 0 0 11.34 12a.7.7 0 0 0 .66-.787v-2.3a.666.666 0 0 0-.66-.66z"></path>
 </symbol>
 </svg><!-- Шапка -->
-    <header class="header">
-      <div class="header-top"><!-- Левая часть -->
-        <div class="header-top__left"><!-- тут, судя по всему, выбор города. Ебнем потом выпадашку со списком городов --><a class="header-top-geo" href=""><svg class="header-top-icon __geo">
-<use xlink:href="#geo"></use>
-</svg><span>Санкт-Петербург</span></a><!-- Адрес компании -->
-          <p class="header-top__address">ТК Гарден Сити, Лахтинский проспект 85Б, 2 этаж</p>
-        </div><!-- Правая часть -->
-        <div class="header-top__right">
-          <div class="header-top__btns"><a class="header-top-tel" href="tel:88125666650"><svg class="header-top-icon __tel">
-<use xlink:href="#tel"></use>
-</svg><span>8 (812) 566 66 50</span></a><!-- Привязать событие всплывашки с обратным звонком --><a class="header-top__btn-cta">Заказать звонок</a><!-- Поиск по сайту --><a class="header-top__btn"><svg class="header-top-icon __search">
-<use xlink:href="#search"></use>
-</svg></a><!-- Сравнение товаров --><a class="header-top__btn" href=""><svg class="header-top-icon __compare">
-<use xlink:href="#compare"></use>
-</svg></a><!-- Понравившееся --><a class="header-top__btn" href=""><svg class="header-top-icon __heart">
-<use xlink:href="#heart_empty"></use>
-</svg></a><!-- Корзина --><a class="header-top__btn" href=""><svg class="header-top-icon __cart">
-<use xlink:href="#cart"></use>
-</svg></a></div>
+<!-- Главный блок, внутри которого все блоки для страницы (без header'а и footer'а) -->
+    <main class="main-block"><!-- Category первый экран -->
+      <section class="category-promo">
+        <div class="n-container category-promo__n-container">
+          <div class="category-promo__content">
+            <div class="category-promo__title heading-title-l">Face and Body</div>
+            <div class="category-promo__sub-title">Мужская косметика для ухода за кожей лица и тела</div>
+            <div class="category-promo__text">Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой линейки косметики.</div><a class="category-promo__btn btn btn--black" href="#category_catalog">Смотреть каталог</a>
+          </div><div class='x_mark_svg'>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="816" viewBox="0 0 816 816">
+<defs>
+<linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+<stop offset="0" stop-color="#0ccfc4"/>
+<stop offset="1" stop-color="#066862"/>
+</linearGradient>
+</defs>
+<clipPath id="test">
+<path id="Union_20" data-name="Union 20" d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z" opacity="0.5" fill="url(#linear-gradient)"/>
+</clipPath>
+<image width="1330" height="855" href="/img/x_mark/x_mark_try.jpg" clip-path="url(#test)" x='-256px' y='-20px' />
+<path id="Union_20" data-name="Union 20" d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z" opacity="0.5" fill="url(#linear-gradient)" x='816px'/>
+</svg>
+</div>
         </div>
-      </div><!-- Основное меню и пр. -->
-<!-- * Необходимо проставить пути в меню и для кнопки "Бизнес с Galore"  -->
-      <div class="header-main">
-        <div class="n-container header-main__n-container">
-          <div class="header-main__logo"><a href="/" title="Galoremen.ru"><img src="./img/svg/logo_black.svg" alt="Galoremen.ru"></a><span class="header-main__logo-desc">Эксклюзивный дистрибьютор редкой мужской косметики.</span></div>
-          <nav class="header-nav"><a href="">Каталог</a><a href="">Бренды</a><a href="">Амбассадоры</a><a href="">Компания</a><a href="">Блог</a><a href="">Контакты</a></nav><a class="header-main__btn btn btn--black" href="">бизнес с galore</a>
+      </section><!-- Ссылочки на товар или бренд?  -->
+      <section class="category-links">
+        <div class="n-container category-links__n-container"><a class="category-link" href="">
+            <div class="category-link__wrap"><img src="/img/category/links/1.jpg" alt=""></div>
+            <div class="category-link__footer">Уход за лицом</div></a><a class="category-link" href="">
+            <div class="category-link__wrap"><img src="/img/category/links/2.jpg" alt=""></div>
+            <div class="category-link__footer">Уход за телом</div></a><a class="category-link" href="">
+            <div class="category-link__wrap"><img src="/img/category/links/1.jpg" alt=""></div>
+            <div class="category-link__footer">Уход за лицом</div></a><a class="category-link" href="">
+            <div class="category-link__wrap"><img src="/img/category/links/2.jpg" alt=""></div>
+            <div class="category-link__footer">Уход за телом</div></a><a class="category-link" href="">
+            <div class="category-link__wrap"><img src="/img/category/links/1.jpg" alt=""></div>
+            <div class="category-link__footer">Уход за лицом</div></a><a class="category-link" href="">
+            <div class="category-link__wrap"><img src="/img/category/links/2.jpg" alt=""></div>
+            <div class="category-link__footer">Уход за телом</div></a></div>
+      </section><!-- Category каталог товаров -->
+      <section class="category-catalog" id="category_catalog">
+        <div class="n-container category-catalog__n-container"><!-- Фильтр -->
+          <div class="category-catalog-filter">
+            <div class="category-catalog-filter__tabs">
+              <div class="category-catalog-filter__tab _active" filter-tab="1">Бренд</div>
+              <div class="category-catalog-filter__tab" filter-tab="2">Тип продукта</div>
+              <div class="category-catalog-filter__tab" filter-tab="3">Цена</div>
+              <div class="category-catalog-filter__tab" filter-tab="4">Страна производитель</div>
+            </div>
+            <div class="category-catalog-filter__filters _active" filter-id="1">
+              <label class="category-catalog-filter__checkbox" for="ch">
+                <input type="checkbox" checked="true" name="ch"><span>London Grooming</span>
+              </label>
+              <label class="category-catalog-filter__checkbox" for="ch">
+                <input type="checkbox" name="ch"><span>London Grooming</span>
+              </label>
+              <label class="category-catalog-filter__checkbox">
+                <input type="checkbox"><span>Ruger</span>
+              </label>
+              <label class="category-catalog-filter__checkbox">
+                <input type="checkbox"><span>Greham Hill</span>
+              </label>
+            </div>
+          </div><!-- Каталог -->
+          <div class="category-catalog__list"><!-- Карточка товара -->
+            <div class="category-catalog-item">
+              <div class="category-catalog-item__header">иконки</div>
+              <div class="category-catalog-item__img"><img src="./img/category/galery/1.png" alt=""></div><a class="category-catalog-item__name" href="" target="_blank">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</a><span class="category-catalog-item__aviability">В наличии</span>
+              <div class="category-catalog-item__prices"><span class="category-catalog-item__price">3 990 ₽ </span><span class="category-catalog-item__price _old">6 990 ₽</span></div>
+              <button class="category-catalog-item__btn">В корзину</button>
+            </div>
+            <div class="category-catalog-item">
+              <div class="category-catalog-item__header">иконки</div>
+              <div class="category-catalog-item__img"><img src="./img/category/galery/1.png" alt=""></div><a class="category-catalog-item__name" href="" target="_blank">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</a><span class="category-catalog-item__aviability">В наличии</span>
+              <div class="category-catalog-item__prices"><span class="category-catalog-item__price">3 990 ₽ </span><span class="category-catalog-item__price _old">6 990 ₽</span></div>
+              <button class="category-catalog-item__btn">В корзину</button>
+            </div>
+            <div class="category-catalog-item">
+              <div class="category-catalog-item__header">иконки</div>
+              <div class="category-catalog-item__img"><img src="./img/category/galery/1.png" alt=""></div><a class="category-catalog-item__name" href="" target="_blank">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</a><span class="category-catalog-item__aviability">В наличии</span>
+              <div class="category-catalog-item__prices"><span class="category-catalog-item__price">3 990 ₽ </span><span class="category-catalog-item__price _old">6 990 ₽</span></div>
+              <button class="category-catalog-item__btn">В корзину</button>
+            </div>
+            <div class="category-catalog-item">
+              <div class="category-catalog-item__header">иконки</div>
+              <div class="category-catalog-item__img"><img src="./img/category/galery/1.png" alt=""></div><a class="category-catalog-item__name" href="" target="_blank">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</a><span class="category-catalog-item__aviability">В наличии</span>
+              <div class="category-catalog-item__prices"><span class="category-catalog-item__price">3 990 ₽ </span><span class="category-catalog-item__price _old">6 990 ₽</span></div>
+              <button class="category-catalog-item__btn">В корзину</button>
+            </div>
+          </div><!-- Кнопка "Показать еще" -->
+          <button class="category-catalog__show-more-btn btn btn--black">Показать еще N</button>
         </div>
-      </div>
-    </header><!-- Главный блок, внутри которого все блоки для страницы (без header'а и footer'а) -->
-    <main class="main-block"><!-- Main --><!-- первый экран --><!-- Буллиты -->
-      <section class="bullets">
-        <ul class="n-container bullets__n-container">
-          <li class="bullets-item bullets-item--default">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col">
-              <p>Эксклюзивный дистрибьютор редких нишевых брендов</p>
+      </section><!-- Большая форма с крестом -->
+      <form class="form-x" action="">
+        <div class="n-container form-x__n-container">
+          <div class="form-x__title">Все, что будет написано здесь для оптовиков, бросится в глаза</div>
+          <div class="form-x__text">Оставь заявку и получи возможность влиять на свое будущее. Без спама и рекламы — только мужские разговоры о бизнесе.</div>
+          <div class="form-x__row">
+            <div class="form-x__row">
+              <input class="field-face" type="text" placeholder="Оптовик Оптович">
+              <input class="field-face" type="email" placeholder="optovik@gmail.com">
+              <button class="btn btn--white">Подписаться</button>
             </div>
-          </li>
-          <li class="bullets-item bullets-item--default">
-            <div class="x-mark-64">         </div>
-            <div class="bullets-item__col">
-              <p>Только сертифицированная продукция</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--default">
-            <div class="x-mark-64">      </div>
-            <div class="bullets-item__col">
-              <p>Доставка от 1-го дня по С-Петербургу, Москве и всей России</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--default">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col">
-              <p>Система лояльности для постоянных клиентов</p>
-            </div>
-          </li>
-        </ul>
-      </section><!-- Делай бизнес с Galore -->
-      <section class="link-x2">
-        <div class="n-container link-x2__n-container">
-          <div class="heading-title-l">Делай бизнес <br> с Galor</div>
-          <div class="link-x2__row"><a class="link-x2-link" href="">
-              <div class="link-x2-link__wrap"><img src="/img/main/business_partner.jpg" alt=""></div>
-              <div class="link-x2__footer">Как стать партнером</div></a><a class="link-x2-link" href="">
-              <div class="link-x2-link__wrap"><img src="/img/main/business_amb.jpg" alt=""></div>
-              <div class="link-x2__footer">Амбассадоры galor</div></a></div>
-        </div>
-      </section><!-- Эксклюзив для России ( Слайдер с брендами ) -->
-      <section class="main-brands">
-        <div class="n-container main-brands__n-container">
-          <div class="main-brands__title heading-title-l">Эксклюзивно для России</div><!-- Слайдер с логотипа брендов -->
-          <div class="main-brands__slider">
-            <div class="main-brands__btns">
-              <div class="main-brands__btn" prev></div>
-              <div class="main-brands__btn" next></div>
-            </div>
-            <div class="main-brands__wrap">
-              <div class="swiper-wrapper">
-                <div class="main-brands__item swiper-slide"><img src="./img/main/brands/london.jpg" alt=""></div>
-                <div class="main-brands__item swiper-slide"><img src="./img/main/brands/solomons.jpg" alt=""></div>
-                <div class="main-brands__item swiper-slide"><img src="./img/main/brands/tomb_45.jpg" alt=""></div>
-                <div class="main-brands__item swiper-slide"><img src="./img/main/brands/fheads.jpg" alt=""></div>
-              </div>
+            <div class="form-x__col">
+              <p class="form-x__text-min">Отдел поддержки оптовых клиентов</p><a class="form-x__text-tel" href="tel:88125666650">8 (812) 566 66 50</a>
             </div>
           </div>
-        </div>
-      </section><!-- Galore Shop -->
-            <section class="link-x1">
-              <div class="n-container link-x1__n-container">
-                <div class="heading-title-l">Galore Shop</div><a class="link-x1-link" href="">
-                  <div class="link-x1-link__wrap"><img src="./img/main/galore_shop.jpg" alt=""></div>
-                  <div class="link-x1__footer">Розничный каталог продукции</div></a>
-              </div>
-            </section><!-- Events -->
-            <section class="link-x1">
-              <div class="n-container link-x1__n-container">
-                <div class="heading-title-l">Events</div><a class="link-x1-link" href="">
-                  <div class="link-x1-link__wrap"><img src="./img/main/events.jpg" alt=""></div>
-                  <div class="link-x1__footer">Мастерклассы и мероприятия</div></a>
-              </div>
-            </section><!-- Show room -->
-            <section class="link-x1">
-              <div class="n-container link-x1__n-container">
-                <div class="heading-title-l">Show Room</div><a class="link-x1-link" href="">
-                  <div class="link-x1-link__wrap"><img src="./img/main/events.jpg" alt=""></div>
-                  <div class="link-x1__footer">Шоурум в санкт-петербурге</div></a>
-              </div>
-            </section><!-- Буллиты -->
-      <section class="bullets">
-        <ul class="n-container bullets__n-container">
-          <li class="bullets-item bullets-item--bold">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col"><span class="bullets-item__title">11</span>
-              <p>эксклюзивных брендов из США и Европы</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--bold">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col"><span class="bullets-item__title">30+</span>
-              <p>технологов и амбассадоров в России и СНГ</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--bold">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col"><span class="bullets-item__title">300+</span>
-              <p>Заключенных партнерских соглашений</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--bold">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col"><span class="bullets-item__title">7000+</span>
-              <p>Система лояльности для постоянных клиентов</p>
-            </div>
-          </li>
-        </ul>
-      </section><!-- Сosmetics & accessories for men -->
-      <section class="link-x6">
-        <div class="n-container link-x6__n-container">
-          <div class="heading-title-l">Сosmetics <br> & accessories <br> for men</div>
-          <div class="link-x6__row"><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/1.jpg" alt=""></div>
-              <div class="link-x6__footer">Уход за бородой и усами</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/2.jpg" alt=""></div>
-              <div class="link-x6__footer">Аксессуары</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/3.jpg" alt=""></div>
-              <div class="link-x6__footer">Уход за лицом и телом</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/4.jpg" alt=""></div>
-              <div class="link-x6__footer">Все для бриться</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/5.jpg" alt=""></div>
-              <div class="link-x6__footer">Уход за волосами</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/6.jpg" alt=""></div>
-              <div class="link-x6__footer">Парфюм</div></a></div>
-        </div>
-      </section><!-- Распродажа Sale Sale Sale -->
-      <section class="main-sale">
-        <div class="n-container main-sale__n-container">
-          <div class="main-sale__title heading-title-l">SALE! SALE! SALE!</div>
-          <div class="main-sale-slider">
-            <div class="main-sale-slider__btns">
-              <div class="main-sale-slider__btn" prev></div>
-              <div class="main-sale-slider__btn" next></div>
-            </div>
-            <div class="main-sale-slider__wrap">
-              <div class="swiper-wrapper"><!-- Карточка товара --><a class="main-sale-item swiper-slide" href="" target="_blank"><img class="main-sale-item__img" src="./img/main/sale/1.jpg" alt=""><span class="main-sale-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="main-sale-item__available">В наличии</span><span class="main-sale-item__price">3 990 ₽</span></a><!-- [END] Карточка товара -->
-<!-- Карточка товара --><a class="main-sale-item swiper-slide" href="" target="_blank"><img class="main-sale-item__img" src="./img/main/sale/1.jpg" alt=""><span class="main-sale-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="main-sale-item__available">В наличии</span><span class="main-sale-item__price">3 990 ₽</span></a><!-- [END] Карточка товара -->
-<!-- Карточка товара --><a class="main-sale-item swiper-slide" href="" target="_blank"><img class="main-sale-item__img" src="./img/main/sale/1.jpg" alt=""><span class="main-sale-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="main-sale-item__available">В наличии</span><span class="main-sale-item__price">3 990 ₽</span></a><!-- [END] Карточка товара -->
-<!-- Карточка товара --><a class="main-sale-item swiper-slide" href="" target="_blank"><img class="main-sale-item__img" src="./img/main/sale/1.jpg" alt=""><span class="main-sale-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="main-sale-item__available">В наличии</span><span class="main-sale-item__price">3 990 ₽</span></a><!-- [END] Карточка товара -->
-              </div>
-            </div>
+        </div><svg xmlns="http://www.w3.org/2000/svg" class='x-mark-azure' xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="816" viewBox="0 0 816 816">
+<defs>
+<linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+<stop offset="0" stop-color="#0ccfc4"/>
+<stop offset="1" stop-color="#066862"/>
+</linearGradient>
+</defs>
+<path id="Union_20" data-name="Union 20" d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z" opacity="0.5" fill="url(#linear-gradient)"/>
+</svg>
+      </form><!-- SEO-абзац с текстом -->
+      <section class="paragraph">
+        <div class="n-container paragraph__n-container">
+          <div class="x-mark-64 paragraph__x-mark-64"></div>
+          <div class="x-mark-64 paragraph__x-mark-64"></div>
+          <div class="paragraph__col">
+            <h4 class="paragraph__title">Мужская косметика и аксессуары</h4>
+            <p class="paragraph__text">Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой линейки косметики.</p>
+            <p class="paragraph__text">Актуальные цены на мужскую косметику для бороды в Санкт-Петербурге и Москве представлены в каталоге интернет-магазина. Оформив покупку на нашем сайте, вы получаете оригинальные сертифицированные средства премиального качества.</p>
           </div>
         </div>
       </section>
     </main><!-- Footer -->
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="n-container footer-top__n-container"><img class="footer-top__logo" src="./img/svg/logo_white.svg" alt="Galoremen">
-          <div class="footer-top__row">
-            <div class="footer-info">
-              <p>Санкт-Петербург,  Лахтинский проспект 85Б, ТК «Гарден Сити», 2 эт. <br>Пн-Пт — 10.30 - 20.30 <br>Сб - Вс — выходной</p><a href="tel:88125666650" link="tel">8 (812) 566 66 50</a><a href="mailto:info@galoremen.ru" link="email">info@galoremen.ru</a>
-            </div>
-            <nav class="footer-menu">
-              <div class="footer-menu-item footer-menu-item--double"><span class="footer-menu-item__title">Эксклюзивные бренды для России</span>
-                <ul>
-                  <li><a href="/">London Grooming</a></li>
-                  <li><a href="/">Solomons</a></li>
-                  <li><a href="/">Razer MD</a></li>
-                  <li><a href="/">Pacionos</a></li>
-                  <li><a href="/">Chicago Comb</a></li>
-                  <li><a href="/">Tomb 45</a></li>
-                  <li><a href="/">Menspire</a></li>
-                  <li><a href="/">Fresh Heads</a></li>
-                  <li><a href="/">Bona Fide</a></li>
-                  <li><a href="/">Fulton & Roark</a></li>
-                </ul>
-              </div>
-              <div class="footer-menu-item"><span class="footer-menu-item__title">Информация</span>
-                <ul>
-                  <li><a href="/">О компании</a></li>
-                  <li><a href="/">Работать с нами</a></li>
-                  <li><a href="/">Политика приватности</a></li>
-                  <li><a href="/">Условия использования</a></li>
-                </ul>
-              </div>
-              <div class="footer-menu-item"><span class="footer-menu-item__title">Покупателям</span>
-                <ul>
-                  <li><a href="/">Контакты</a></li>
-                  <li><a href="/">Гарантия и оплата</a></li>
-                  <li><a href="/">Доставка и возврат</a></li>
-                  <li><a href="/">FAQ</a></li>
-                </ul>
-              </div>
-              <div class="footer-menu-item"><span class="footer-menu-item__title">Своя тусовка</span>
-                <ul>
-                  <li><a href="/" target="_blank">Instagram</a></li>
-                  <li><a href="/" target="_blank">VK</a></li>
-                  <li><a href="/" target="_blank">Facebook</a></li>
-                  <li><a href="/" target="_blank">YouTube</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-      <div class="footer-mid">
-        <div class="n-container footer-mid__n-container">
-          <p class="footer-mid__title">Не пропусти ништяки! Подпишись на хорошие новости!</p>
-          <form class="footer-mid-form" action="" type="">
-            <input class="field-face" type="email" placeholder="Ваш E-mail">
-            <button class="btn btn--white" type="submit">Подписаться</button>
-          </form>
-        </div>
-      </div>
-      <div class="footer-bot">
-        <div class="n-container footer-bot__n-container">
-          <p>Все права защищены.© 2010-2019 Galoremen</p><a href="http://instagram.com/midyanets" target="_blank" title="instagram.com/midyanets">Midyanets 2019</a>
-        </div>
-      </div>
-    </footer><!-- Подрубка общих скриптов и библ. -->
+<!-- Подрубка общих скриптов и библ. -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="application/javascript" src="./js/jquery.fancybox.min.js"></script>
     <script type="application/javascript" src="./js/swiper.5.min.js"></script><!-- Скрипты для конкретных страниц -->
     <script type="application/javascript" src="./js/main.js"></script>
+    <script type="application/javascript" src="./js/product_card.js"></script>
+    <script type="application/javascript" src="./js/business.js"></script>
+    <script type="application/javascript" src="./js/brands.js"></script>
+    <script type="application/javascript" src="./js/brand.js"></script>
   </body>
 </html>

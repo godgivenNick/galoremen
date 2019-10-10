@@ -80,3 +80,102 @@
     }
 }
 
+
+
+
+/*   Адаптив   */
+
+
+@media screen and (max-width: 1600px){
+
+    .catalog-promo {
+
+        &__n-container {
+            
+        }
+
+        .x_mark_svg {
+            transform: scale(.75);
+            right: -60px;
+            top: -70px;
+
+        }
+
+
+        &__form {
+            input {
+                max-width: 252px;
+            }
+        }
+
+    }
+
+
+}
+
+@media screen and (max-width: 1300px){
+
+    .catalog-promo__content {
+        max-width: 536px;
+
+        padding: 0;
+        padding-top: 28px;
+    }
+
+
+    .catalog-promo .x_mark_svg {
+        transform: scale(.5);
+        right: -164px;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px){
+
+    .catalog-promo {
+        min-height: 0;
+        padding-bottom: 64px;
+    }
+
+    .catalog-promo .x_mark_svg {
+        display: none;
+    }
+
+    .catalog-promo__content {
+        max-width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    .catalog-promo__title {
+        margin-bottom: 32px;
+    }
+
+    .catalog-promo__sub-title {
+        margin-bottom: 20px;
+    }
+
+    .catalog-promo__text {
+        margin-bottom: 32px;
+    }
+
+    .catalog-promo__form {
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        input {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+
+
+        .btn {
+            width: 100%;
+        }
+    }
+}
