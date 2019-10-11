@@ -10,6 +10,13 @@
         position: relative;
     }
 
+    .x_mark_svg {
+        position: absolute;
+        right: 130px;
+        top: -225px;
+        z-index: -1;
+    }
+
 
     &__content {
         width: 100%;
@@ -57,24 +64,60 @@
     &__btn {
         width: 393px;
     }
+}
 
 
+@media screen and (max-width: 1300px){
 
-    &__x-mark {
-        width: 816px;
-        height: 816px;
+    .category-promo__content {
+        max-width: 536px;
+    }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        background: var(--galore_gradient_azure);
+    .category-promo .x_mark_svg {
+        transform: scale(.5);
+        right: -164px;
+    }
 
-        position: absolute;
-        right: 130px; /* не могу paddingi контейнера заменить на - ширину */
-        top: calc(0% - 130px - 32px - 48px ); /* 130 - шапка, 32 - еще чтуь выше, 48 - pagi */
+}
 
-        z-index: -1;
+
+@media screen and (max-width: 1024px){
+
+    .category-promo {
+        min-height: 0;
+        padding-bottom: 64px;
+    }
+
+    .category-promo .x_mark_svg {
+        display: none;
+    }
+
+    .category-promo__content {
+        max-width: 100%;
     }
 }
+
+
+
+@media screen and (max-width: 768px){
+
+    .category-promo__btn {
+        width: 100%;
+    }
+
+    .category-promo__title {
+        margin-bottom: 32px;
+    }
+
+    .category-promo__sub-title {
+        margin-bottom: 20px;
+    }
+
+    .category-promo__text {
+        margin-bottom: 32px;
+    }
+}
+
+
 

@@ -1,68 +1,135 @@
 header.header
-    .header-top
-      <!-- Левая часть -->
-      .header-top__left
+  .header-top
 
-        <!-- тут, судя по всему, выбор города. Ебнем потом выпадашку со списком городов -->
-        a(href='').header-top-geo
-          <svg class="header-top-icon __geo">
-            <use xlink:href="#geo"></use>
+    <!-- Левая часть -->
+    .header-top__left
+
+      <!-- тут, судя по всему, выбор города. Ебнем потом выпадашку со списком городов -->
+      a(href='').header-top-geo
+        <svg class="header-top-icon __geo">
+          <use xlink:href="#geo"></use>
+        </svg>
+        span Санкт-Петербург
+
+      <!-- Адрес компании -->
+      p.header-top__address ТК Гарден Сити, Лахтинский проспект 85Б, 2 этаж
+
+
+      <!-- Мобильный кусочек -->
+      .header__burger
+        span
+      a(href='').header__logo-mobile
+        img(src="./img/svg/logo_black.svg", alt="Galoremen.ru")
+
+    <!-- Правая часть -->
+    .header-top__right
+
+      .header-top__btns
+
+        a(href='tel:88125666650').header-top-tel
+          <svg class="header-top-icon __tel">
+            <use xlink:href="#tel"></use>
           </svg>
-          span Санкт-Петербург
+          span 8 (812) 566 66 50
 
-        <!-- Адрес компании -->
-        p.header-top__address ТК Гарден Сити, Лахтинский проспект 85Б, 2 этаж
+        <!-- Привязать событие всплывашки с обратным звонком -->
+        a().header-top__btn-cta Заказать звонок
 
-      <!-- Правая часть -->
-      .header-top__right
-        .header-top__btns
+        <!-- Поиск по сайту -->
+        a.header-top__btn.__search
+          <svg class="header-top-icon __search">
+            <use xlink:href="#search"></use>
+          </svg>
 
-          a(href='tel:88125666650').header-top-tel
-            <svg class="header-top-icon __tel">
-              <use xlink:href="#tel"></use>
-            </svg>
-            span 8 (812) 566 66 50
+        <!-- Сравнение товаров -->
+        a(href='').header-top__btn.__compare
+          <svg class="header-top-icon __compare">
+            <use xlink:href="#compare"></use>
+          </svg>
 
-          <!-- Привязать событие всплывашки с обратным звонком -->
-          a().header-top__btn-cta Заказать звонок
+        <!-- Понравившееся -->
+        a(href='').header-top__btn.__heart
+          <svg class="header-top-icon __heart">
+            <use xlink:href="#heart_empty"></use>
+          </svg>
 
-          <!-- Поиск по сайту -->
-          a.header-top__btn
-            <svg class="header-top-icon __search">
-              <use xlink:href="#search"></use>
-            </svg>
+        <!-- Корзина -->
+        a(href='').header-top__btn.__cart
+          <svg class="header-top-icon __cart">
+            <use xlink:href="#cart"></use>
+          </svg>
 
-          <!-- Сравнение товаров -->
-          a(href='').header-top__btn
-            <svg class="header-top-icon __compare">
-              <use xlink:href="#compare"></use>
-            </svg>
+  <!-- Основное меню и пр. -->
+  <!-- * Необходимо проставить пути в меню и для кнопки "Бизнес с Galore"  -->
+  .header-main
+    .n-container.header-main__n-container
+      .header-main__logo
+        a(href='/' title='Galoremen.ru')
+          img(src="./img/svg/logo_black.svg", alt="Galoremen.ru")
+        span.header-main__logo-desc Эксклюзивный дистрибьютор редкой мужской косметики.
 
-          <!-- Понравившееся -->
-          a(href='').header-top__btn
-            <svg class="header-top-icon __heart">
-              <use xlink:href="#heart_empty"></use>
-            </svg>
+      nav.header-nav
+        a.header-nav-item._dd
+          span.header-nav-item__name Каталог
+          ul.nav-item-dropdown
+          
+            li.nav-item-dropdown__item
+              span Все для бритья
+              span._next-icon
+              ul.nav-item-dropdown._sub
+                li.nav-item-dropdown__item
+                  span Бальзам для бороды <span>(1)<span>
+                li.nav-item-dropdown__item
+                  span Масло для бороды <span>(2)<span>
+                li.nav-item-dropdown__item
+                  span Расчески для бороды <span>(6)<span>
+                li.nav-item-dropdown__item
+                  span Еще что-то для бороды <span>(6)<span>
+                li.nav-item-dropdown__item
+                  span Борода для бороды <span>(6)<span>
+            li.nav-item-dropdown__item
+              span Еще че-т для бритья
+              span._next-icon
+              ul.nav-item-dropdown._sub
+                li.nav-item-dropdown__item
+                  span Бальзам для бороды <span>(1)<span>
+                li.nav-item-dropdown__item
+                  span Масло для бороды <span>(2)<span>
 
-          <!-- Корзина -->
-          a(href='').header-top__btn
-            <svg class="header-top-icon __cart">
-              <use xlink:href="#cart"></use>
-            </svg>
+        a.header-nav-item(href='javascript:void();')._dd
+          span.header-nav-item__name Бренды
 
-    <!-- Основное меню и пр. -->
-    <!-- * Необходимо проставить пути в меню и для кнопки "Бизнес с Galore"  -->
-    .header-main
-        .n-container.header-main__n-container
-            .header-main__logo
-                a(href='/' title='Galoremen.ru')
-                    img(src="./img/svg/logo_black.svg", alt="Galoremen.ru")
-                span.header-main__logo-desc Эксклюзивный дистрибьютор редкой мужской косметики.
-            nav.header-nav
-                a(href='') Каталог
-                a(href='') Бренды
-                a(href='') Амбассадоры
-                a(href='') Компания
-                a(href='') Блог
-                a(href='') Контакты
-            a(href='').header-main__btn.btn.btn--black бизнес с galore
+          ul.nav-item-dropdown
+          
+            li.nav-item-dropdown__item
+              span Бренд 1
+              span._next-icon
+              ul.nav-item-dropdown._sub
+                li.nav-item-dropdown__item
+                  span Бальзам <span>(1)<span>
+                li.nav-item-dropdown__item
+                  span Масло <span>(2)<span>
+            li.nav-item-dropdown__item
+              span Бренд 2
+              span._next-icon
+              ul.nav-item-dropdown._sub
+                li.nav-item-dropdown__item
+                  span Бальзам для бороды <span>(1)<span>
+                li.nav-item-dropdown__item
+                  span Масло для бороды <span>(2)<span>
+
+        a.header-nav-item(href='')
+          span.header-nav-item__name Амбассадоры
+
+        a.header-nav-item(href='')
+          span.header-nav-item__name Компания
+
+        a.header-nav-item(href='')
+          span.header-nav-item__name Блог
+
+        a.header-nav-item(href='')
+          span.header-nav-item__name Контакты
+                  
+      a(href='').header-main__btn.btn.btn--black бизнес с galore
+
+

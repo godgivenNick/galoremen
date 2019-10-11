@@ -9,26 +9,77 @@ section.category-catalog#category_catalog
                 .category-catalog-filter__tab(filter-tab='3') Цена
                 .category-catalog-filter__tab(filter-tab='4') Страна производитель
 
-            .category-catalog-filter__filters(filter-id='1')._active
-                label(for='ch').category-catalog-filter__checkbox
-                    input(type="checkbox" checked='true' name='ch')
+            <!-- По брендам -->
+            .category-catalog-filter__filters(filter-id='1')
+                label.category-catalog-filter__checkbox
+                    input(type="checkbox")
                     span London Grooming
-                label(for='ch').category-catalog-filter__checkbox
-                    input(type="checkbox" name='ch')
+                label.category-catalog-filter__checkbox
+                    input(type="checkbox")
                     span London Grooming
                 label.category-catalog-filter__checkbox
                     input(type="checkbox")
                     span Ruger
+
+
+            <!-- По типу -->
+            .category-catalog-filter__filters(filter-id='2')
                 label.category-catalog-filter__checkbox
                     input(type="checkbox")
-                    span Greham Hill
+                    span Сигареты
+                label.category-catalog-filter__checkbox
+                    input(type="checkbox")
+                    span Кокаин
+                label.category-catalog-filter__checkbox
+                    input(type="checkbox")
+                    span Халва
+
+
+            <!-- Разброс цен -->
+            .category-catalog-filter__filters(filter-id='3')._active
+
+                .category-catalog-filter-range(max-price='50000')
+                    p.category-catalog-filter-range__text Диапазон цен:
+                    .category-catalog-filter-range__col
+                        .category-catalog-filter-range__prices
+                            input(type='text' id='min_price' value='0').field-face
+                            span -
+                            input(type='text' id='max_price').field-face
+                            span Руб.
+
+                        .category-catalog-filter-range__range
+
+
+
+            <!-- По стране -->
+            .category-catalog-filter__filters(filter-id='4')
+                label.category-catalog-filter__checkbox
+                    input(type="checkbox")
+                    span Россия
+                label.category-catalog-filter__checkbox
+                    input(type="checkbox")
+                    span Казахстан
+                label.category-catalog-filter__checkbox
+                    input(type="checkbox")
+                    span Ямайка
+
+        
 
         <!-- Каталог -->
+        <!-- Отображаем 8 товаров ( у меня 4 для экономии времени) -->
         .category-catalog__list
 
             <!-- Карточка товара -->
             .category-catalog-item
-                .category-catalog-item__header иконки
+                .category-catalog-item__header
+                    button.category-catalog-item__icon.__compare
+                        <svg>
+                          <use xlink:href="#compare"></use>
+                        </svg>
+                    button.category-catalog-item__icon.__heart
+                        <svg>
+                          <use xlink:href="#heart_empty"></use>
+                        </svg>
                 .category-catalog-item__img
                     img(src="./img/category/galery/1.png", alt="")
                 a(href='' target='_blank').category-catalog-item__name Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл
@@ -39,7 +90,15 @@ section.category-catalog#category_catalog
                 button.category-catalog-item__btn В корзину
 
             .category-catalog-item
-                .category-catalog-item__header иконки
+                .category-catalog-item__header
+                    button.category-catalog-item__icon.__compare
+                        <svg>
+                          <use xlink:href="#compare"></use>
+                        </svg>
+                    button.category-catalog-item__icon.__heart
+                        <svg>
+                          <use xlink:href="#heart_empty"></use>
+                        </svg>
                 .category-catalog-item__img
                     img(src="./img/category/galery/1.png", alt="")
                 a(href='' target='_blank').category-catalog-item__name Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл
@@ -50,7 +109,15 @@ section.category-catalog#category_catalog
                 button.category-catalog-item__btn В корзину
 
             .category-catalog-item
-                .category-catalog-item__header иконки
+                .category-catalog-item__header
+                    button.category-catalog-item__icon.__compare
+                        <svg>
+                          <use xlink:href="#compare"></use>
+                        </svg>
+                    button.category-catalog-item__icon.__heart
+                        <svg>
+                          <use xlink:href="#heart_empty"></use>
+                        </svg>
                 .category-catalog-item__img
                     img(src="./img/category/galery/1.png", alt="")
                 a(href='' target='_blank').category-catalog-item__name Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл
@@ -61,7 +128,15 @@ section.category-catalog#category_catalog
                 button.category-catalog-item__btn В корзину
 
             .category-catalog-item
-                .category-catalog-item__header иконки
+                .category-catalog-item__header
+                    button.category-catalog-item__icon.__compare
+                        <svg>
+                          <use xlink:href="#compare"></use>
+                        </svg>
+                    button.category-catalog-item__icon.__heart
+                        <svg>
+                          <use xlink:href="#heart_empty"></use>
+                        </svg>
                 .category-catalog-item__img
                     img(src="./img/category/galery/1.png", alt="")
                 a(href='' target='_blank').category-catalog-item__name Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл
