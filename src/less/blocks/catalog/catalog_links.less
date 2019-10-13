@@ -1,21 +1,35 @@
 .catalog-links {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     margin-bottom: 180px; /* ниже форма с крестом */
 
     &__n-container {
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
 }
 
 .catalog-link {
     width: calc(100% / 3 - 20px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     position: relative;
 
@@ -27,7 +41,8 @@
 
     &:hover {
         img {
-            transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+                    transform: scale(1.05);
         }
 
         .catalog-link__wrap {
@@ -55,8 +70,11 @@
             width: 100%;
             height: auto;
 
+            -webkit-transition: .3s ease;
+
             transition: .3s ease;
-            transform-origin: center center;
+            -webkit-transform-origin: center center;
+                    transform-origin: center center;
 
             z-index: 1;
         }
@@ -76,6 +94,7 @@
             height: calc(100% - 1px);
 
             background-color: rgba(33,33,33,.5);
+            -webkit-transition: .3s ease-out;
             transition: .3s ease-out;
             opacity: 0;
             pointer-events: none;
@@ -90,9 +109,17 @@
         height: 96px;
         padding: 0 24px;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         background-color: #292727;
         color: var(--galore_white);
@@ -105,6 +132,8 @@
         text-align: center;
 
         text-transform: uppercase;
+
+        -webkit-transition: .25s ease;
 
         transition: .25s ease;
 

@@ -7,12 +7,11 @@
     <title>gogi</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/swiper.5.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css"><!-- Для верстки -->
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=1"><!-- Подключение общих для всех страниц стилей -->
-<!-- Стили для стр. "Каталог" -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.5.min.css"><!-- Подключение общих для всех страниц стилей -->
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=1"><!-- Стили для стр. "Товар" -->
+    <link rel="stylesheet" type="text/css" href="css/product_card.css?v=1">
   </head>
   <body><!-- sprite с svg-иконками --><svg width="0" height="0" class="hidden">
 <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23.75" id="cart">
@@ -101,232 +100,55 @@
         </div>
       </div>
     </header><!-- Главный блок, внутри которого все блоки для страницы (без header'а и footer'а) -->
-    <main class="main-block"><!-- первый экран -->
-      <section class="main-first">
-        <div class="main-first__footer">
-          <div class="main-first__btns">
-            <div class="main-first__btn" prev></div>
-            <div class="main-first__btn" next></div>
-          </div>
-          <div class="main-first__counter"><span class="main-first__counter--current">1</span><span class="main-first__counter--all">/ 3</span></div>
-        </div>
-        <div class="swiper-wrapper">
-          <div class="main-first-block swiper-slide" style="background-image: url(&quot;./img/main/galore_promo_1.jpg&quot;);" counter="1">
-            <div class="main-first-block__container">
-              <div class="main-first-block__title">Премиальная мужская косметика</div>
-              <div class="main-first-block__sub-title">Уникальные бренды из США, Великобритании и Италии с доставкой по всей России от 1-го дня</div><a class="main-first-block__btn btn btn--white" href="">Смотреть бренды</a>
+    <main class="main-block"><!-- Blogs --><!-- Хлебные крошки -->
+      <div class="crumbs">
+        <div class="n-container crumbs__n-container"><!-- Для крошки текущей страницы добавляем класс '_current' --><a class="crumbs__btn" href="">< Назад</a><a class="crumbs__btn" href="">Главная</a><a class="crumbs__btn _current" href="">Каталог</a></div>
+      </div><!-- Первый экран -->
+      <section class="blogs-promo">
+        <div class="n-container blogs-promo__n-container">
+          <div class="blogs-promo__title heading-title-l">Blog</div>
+          <div class="blogs-promo-row">
+            <div class="blogs-promo-content"><span class="blogs-promo-content__place">Мероприятие, Санкт-Петербург</span>
+              <div class="blogs-promo-content__title">Выездная фотосессия с великими мастерами современности</div><span class="blogs-promo-content__date">Выездная фотосессия с великими мастерами современности</span>
+              <p class="blogs-promo-content__desc">Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой линейки косметики. Актуальные цены на мужскую косметику для бороды в Санкт-Петербурге и Москве представлены в каталоге интернет-магазина. Оформив покупку на нашем сайте, вы получаете оригинальные сертифицированные средства премиального качества.</p>
+              <div class="blogs-promo-content__footer"><a class="blogs-promo-content__btn btn btn--white" href="">Читать статью</a>
+                <div class="blogs-promo-content__views"><span class="blogs-promo-content__views--icon"></span><span class="blogs-promo-content__views--count">1994</span></div>
+              </div>
             </div>
-          </div>
-          <div class="main-first-block swiper-slide" style="background-image: url(&quot;./img/main/galore_promo_1.jpg&quot;);" counter="2">
-            <div class="main-first-block__container">
-              <div class="main-first-block__title">Премиальная мужская </div>
-              <div class="main-first-block__sub-title">Уникальные бренды из США, Великобритании и Италии с доставкой по всей России от 1-го дня</div><a class="main-first-block__btn btn btn--white" href="">Смотреть бренды</a>
-            </div>
-          </div>
-          <div class="main-first-block swiper-slide" style="background-image: url(&quot;./img/main/galore_promo_1.jpg&quot;);" counter="3">
-            <div class="main-first-block__container">
-              <div class="main-first-block__title">Премиальная </div>
-              <div class="main-first-block__sub-title">Уникальные бренды из США, Великобритании и Италии с доставкой по всей России от 1-го дня</div><a class="main-first-block__btn btn btn--white" href="">Смотреть бренды</a>
-            </div>
+            <div class="blogs-promo__img" style="background-image: url(&quot;./img/blog/blog_promo_bg.jpg&quot;);"><!-- сюды тоже вставить тот же путь к картинке --><img src="./img/blog/blog_promo_bg.jpg" alt=""></div>
           </div>
         </div>
-      </section><!-- Буллиты -->
-      <section class="bullets">
-        <ul class="n-container bullets__n-container">
-          <li class="bullets-item bullets-item--default">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col">
-              <p>Эксклюзивный дистрибьютор редких нишевых брендов</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--default">
-            <div class="x-mark-64">         </div>
-            <div class="bullets-item__col">
-              <p>Только сертифицированная продукция</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--default">
-            <div class="x-mark-64">      </div>
-            <div class="bullets-item__col">
-              <p>Доставка от 1-го дня по С-Петербургу, Москве и всей России</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--default">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col">
-              <p>Система лояльности для постоянных клиентов</p>
-            </div>
-          </li>
-        </ul>
-      </section><!-- Делай бизнес с Galore -->
-      <section class="link-x2">
-        <div class="n-container link-x2__n-container">
-          <div class="heading-title-l">Делай бизнес <br> с Galor</div>
-          <div class="link-x2__row"><a class="link-x2-link" href="">
-              <div class="link-x2-link__wrap"><img src="/img/main/business_partner.jpg" alt=""></div>
-              <div class="link-x2__footer">Как стать партнером</div></a><a class="link-x2-link" href="">
-              <div class="link-x2-link__wrap"><img src="/img/main/business_amb.jpg" alt=""></div>
-              <div class="link-x2__footer">Амбассадоры galor</div></a></div>
-        </div>
-      </section><!-- Эксклюзив для России ( Слайдер с брендами ) -->
-      <section class="main-brands">
-        <div class="n-container main-brands__n-container">
-          <div class="main-brands__title heading-title-l">Эксклюзивно для России</div><!-- Слайдер с логотипа брендов -->
-          <div class="main-brands__slider">
-            <div class="main-brands__btns">
-              <div class="main-brands__btn" prev></div>
-              <div class="main-brands__btn" next></div>
-            </div>
-            <div class="main-brands__wrap">
-              <div class="swiper-wrapper">
-                <div class="main-brands__item swiper-slide"><img src="./img/main/brands/london.jpg" alt=""></div>
-                <div class="main-brands__item swiper-slide"><img src="./img/main/brands/solomons.jpg" alt=""></div>
-                <div class="main-brands__item swiper-slide"><img src="./img/main/brands/tomb_45.jpg" alt=""></div>
-                <div class="main-brands__item swiper-slide"><img src="./img/main/brands/fheads.jpg" alt=""></div>
+      </section><!-- Список брендов -->
+      <section class="blogs-main">
+        <div class="n-container blogs-main__n-container">
+          <ul class="blogs-main__list">
+            <li class="blogs-main-item">
+              <div class="blogs-main-item__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+              <div class="blogs-main-item__col"><span class="blogs-main-item__place">Мероприятие, Санкт-Петербург</span>
+                <div class="blogs-main-item__title">Выездная фотосессия с великими мастерами современности</div><span class="blogs-main-item__date">22 октября, 2019</span>
+                <p class="blogs-main-item__desc">Актуальные цены на мужскую косметику для бороды в Санкт-Петербурге и Москве представлены в каталоге интернет-магазина. Оформив покупку на нашем сайте, вы получаете оригинальные сертифицированные…</p>
+                <div class="blogs-main-item__footer"><a class="blogs-main-item__btn btn btn--black" href="">Читать статью</a><span class="blogs-main-item__count">1994</span></div>
+              </div>
+            </li>
+            <li class="blogs-main-item">
+              <div class="blogs-main-item__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+              <div class="blogs-main-item__col"><span class="blogs-main-item__place">Мероприятие, Санкт-Петербург</span>
+                <div class="blogs-main-item__title">Выездная фотосессия с великими мастерами современности</div><span class="blogs-main-item__date">22 октября, 2019</span>
+                <p class="blogs-main-item__desc">Актуальные цены на мужскую косметику для бороды в Санкт-Петербурге и Москве представлены в каталоге интернет-магазина. Оформив покупку на нашем сайте, вы получаете оригинальные сертифицированные…</p>
+                <div class="blogs-main-item__footer"><a class="blogs-main-item__btn btn btn--black" href="">Читать статью</a><span class="blogs-main-item__count">1994</span></div>
+              </div>
+            </li>
+            <button class="blogs-main__show-more btn btn--black">Показать еще</button>
+          </ul><!-- Правая часть с рандомной статьей и инстой -->
+          <div class="blogs-main__aside">
+            <div class="blogs-main-random-item">
+              <div class="blogs-main-random-item__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+              <div class="blogs-main-random-item__col"><span class="blogs-main-random-item__type">Уход за лицом</span>
+                <div class="blogs-main-random-item__name">Выездная фотосессия с великими мастерами современности</div>
+                <div class="blogs-main-random-item__footer"><span class="blogs-main-random-item__date">22 октября, 2019</span><span class="blogs-main-random-item__count">1994</span></div>
               </div>
             </div>
           </div>
-        </div>
-      </section><!-- Galore Shop -->
-            <section class="link-x1">
-              <div class="n-container link-x1__n-container">
-                <div class="heading-title-l">Galore Shop</div><a class="link-x1-link" href="">
-                  <div class="link-x1-link__wrap"><img src="./img/main/galore_shop.jpg" alt=""></div>
-                  <div class="link-x1__footer">Розничный каталог продукции</div></a>
-              </div>
-            </section><!-- Events -->
-            <section class="link-x1">
-              <div class="n-container link-x1__n-container">
-                <div class="heading-title-l">Events</div><a class="link-x1-link" href="">
-                  <div class="link-x1-link__wrap"><img src="./img/main/events.jpg" alt=""></div>
-                  <div class="link-x1__footer">Мастерклассы и мероприятия</div></a>
-              </div>
-            </section><!-- Show room -->
-            <section class="link-x1">
-              <div class="n-container link-x1__n-container">
-                <div class="heading-title-l">Show Room</div><a class="link-x1-link" href="">
-                  <div class="link-x1-link__wrap"><img src="./img/main/events.jpg" alt=""></div>
-                  <div class="link-x1__footer">Шоурум в санкт-петербурге</div></a>
-              </div>
-            </section><!-- Буллиты -->
-      <section class="bullets">
-        <ul class="n-container bullets__n-container">
-          <li class="bullets-item bullets-item--bold">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col"><span class="bullets-item__title">11</span>
-              <p>эксклюзивных брендов из США и Европы</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--bold">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col"><span class="bullets-item__title">30+</span>
-              <p>технологов и амбассадоров в России и СНГ</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--bold">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col"><span class="bullets-item__title">300+</span>
-              <p>Заключенных партнерских соглашений</p>
-            </div>
-          </li>
-          <li class="bullets-item bullets-item--bold">
-            <div class="x-mark-64"></div>
-            <div class="bullets-item__col"><span class="bullets-item__title">7000+</span>
-              <p>Система лояльности для постоянных клиентов</p>
-            </div>
-          </li>
-        </ul>
-      </section><!-- Сosmetics & accessories for men -->
-      <section class="link-x6">
-        <div class="n-container link-x6__n-container">
-          <div class="heading-title-l">Сosmetics <br> & accessories <br> for men</div>
-          <div class="link-x6__row"><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/1.jpg" alt=""></div>
-              <div class="link-x6__footer">Уход за бородой и усами</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/2.jpg" alt=""></div>
-              <div class="link-x6__footer">Аксессуары</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/3.jpg" alt=""></div>
-              <div class="link-x6__footer">Уход за лицом и телом</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/4.jpg" alt=""></div>
-              <div class="link-x6__footer">Все для бриться</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/5.jpg" alt=""></div>
-              <div class="link-x6__footer">Уход за волосами</div></a><a class="link-x6-link" href="">
-              <div class="link-x6-link__wrap"><img src="./img/main/catalog/6.jpg" alt=""></div>
-              <div class="link-x6__footer">Парфюм</div></a></div>
-        </div>
-      </section><!-- Распродажа Sale Sale Sale -->
-      <section class="main-sale">
-        <div class="n-container main-sale__n-container">
-          <div class="main-sale__title heading-title-l">SALE! SALE! SALE!</div>
-          <div class="main-sale-slider">
-            <div class="main-sale-slider__btns">
-              <div class="main-sale-slider__btn" prev></div>
-              <div class="main-sale-slider__btn" next></div>
-            </div>
-            <div class="main-sale-slider__wrap">
-              <div class="swiper-wrapper"><!-- Карточка товара --><a class="main-sale-item swiper-slide" href="" target="_blank">
-                  <div class="main-sale-item__img"><img src="./img/main/sale/1.jpg" alt=""></div><span class="main-sale-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="main-sale-item__available">В наличии</span><span class="main-sale-item__price">3 990 ₽</span>
-                  <button class="main-sale-item__btn">В корзину</button></a><!-- [END] Карточка товара -->
-<!-- Карточка товара --><a class="main-sale-item swiper-slide" href="" target="_blank">
-                  <div class="main-sale-item__img"><img src="./img/main/sale/1.jpg" alt=""></div><span class="main-sale-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="main-sale-item__available">В наличии</span><span class="main-sale-item__price">3 990 ₽</span>
-                  <button class="main-sale-item__btn">В корзину</button></a><!-- [END] Карточка товара -->
-<!-- Карточка товара --><a class="main-sale-item swiper-slide" href="" target="_blank">
-                  <div class="main-sale-item__img"><img src="./img/main/sale/1.jpg" alt=""></div><span class="main-sale-item__name">Паста сильной фиксации с легким блеском SATIN Vol. 4 Ruger, 100 мл</span><span class="main-sale-item__available">В наличии</span><span class="main-sale-item__price">3 990 ₽</span>
-                  <button class="main-sale-item__btn">В корзину</button></a><!-- [END] Карточка товара -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section><!-- Galore - твой надежный партнер -->
-      <section class="main-promo">
-        <div class="n-container main-promo__n-container"><!-- Ниже заголовки и текста - не знаю какие для них нужно было проставить теги, поэтому сделал дивами на время, чтоб ниче не напутать -->
-          <div class="main-promo__content">
-            <div class="main-promo__title heading-title-l">Galore — твой надежный партнер</div>
-            <div class="main-promo__sub-title">Интернет-магазин для барберов и барбершопов</div>
-            <div class="main-promo__text">«GaloreMen» - впечатляющий выбор товаров для мужских парикмахерских и салонов красоты от лидеров мирового производства в сегменте мужской косметики для груминга и товаров для барбершопов. В каталоге вы найдёте исключительно оригинальную продукцию, качество которой проверено практикой. В нашем интернет магазине всё для барбера и мужского груминга представлены:</div>
-            <ul class="main-promo__list">
-              <li>Расчёски и бритвы премиум класса</li>
-              <li>Мужская косметика для бритья</li>
-              <li>Средства по уходу за бородой и волосами, стайлинги</li>
-              <li>Разнообразные парикмахерские аксессуары</li>
-              <li>Оригинальные средства по уходу за лицом и телом и многое другое. </li>
-            </ul>
-            <div class="main-promo__text">Купить мужские парикмахерские товары в Санкт-Петербурге или Москве очень просто. Мы осуществляем доставку по всей России и странам СНГ. Для оптовых покупателей предоставляется бесплатная доставка. (Уточняйте при оформлении заказа).</div>
-            <div class="main-promo__sub-title">Несколько причин начать сотрудничество с нами:</div>
-            <ul class="main-promo__list">
-              <li>Официальный представитель мировых брендов мужской косметики;</li>
-              <li>Готовые решения для барбершопов и салонов красоты;</li>
-              <li>Каталог с постоянно обновляющимся ассортиментом продукции.</li>
-            </ul>
-          </div><div class='x_mark_svg'>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="816" viewBox="0 0 816 816">
-<clipPath id="test">
-<path id="Union_20" data-name="Union 20" d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z" opacity="0.5" fill="url(#linear-gradient)"/>
-</clipPath>
-<image width="846" height="846" href="./img/brand/brand_x_mark_img.jpg" clip-path="url(#test)" x='0px' y='0px' />
-</svg>
-</div>
-        </div>
-      </section><!-- Худая форма -->
-      <section class="form-thin">
-        <div class="n-container form-thin__n-container">
-          <p class="form-thin__offer">Возможно, ты не понял о чем это мы… Жми на кнопку — все расскажем!</p>
-          <button class="form-thin__btn btn btn--grey">Задать вопрос</button>
-        </div>
-      </section><!-- Show Room -->
-      <section class="main-room">
-        <div class="n-container main-room__n-container">
-          <div class="main-room__title heading-title-l">До встречи на шоуруме!</div>
-          <div class="main-room__galery">
-            <div class="main-room__img _x4"><img src="./img/main/room/1.jpg" alt=""></div>
-            <div class="main-room__box">
-              <div class="main-room__img _x1"><img src="./img/main/room/2.jpg" alt=""></div>
-              <div class="main-room__img _x1"><img src="./img/main/room/3.jpg" alt=""></div>
-              <div class="main-room__img _x1"><img src="./img/main/room/4.jpg" alt=""></div>
-              <div class="main-room__img _x1"><img src="./img/main/room/4.jpg" alt=""></div>
-            </div>
-          </div>
-          <p class="main-room__address">ТК «Гарден Сити», С-Петербург, Лахтинский проспект 85Б, 2 этаж <br> Пн-Пт  10.30 – 20.30</p>
         </div>
       </section>
     </main><i class="main-overlay"></i><!-- Footer -->
@@ -398,13 +220,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="application/javascript" src="./js/jquery.fancybox.min.js"></script>
-    <script type="application/javascript" src="./js/swiper.5.min.js"></script><!-- Скрипты для конкретных страниц -->
-    <script type="application/javascript" src="./js/header.js"></script>
-    <script type="application/javascript" src="./js/main.js"></script>
-    <script type="application/javascript" src="./js/category.js"></script>
+    <script type="application/javascript" src="./js/swiper.5.min.js"></script><!-- Для шапки => для каждой стр. -->
+    <script type="application/javascript" src="./js/header.js"></script><!-- Только для стр. "Товар" -->
     <script type="application/javascript" src="./js/product_card.js"></script>
-    <script type="application/javascript" src="./js/business.js"></script>
-    <script type="application/javascript" src="./js/brands.js"></script>
-    <script type="application/javascript" src="./js/brand.js"></script>
   </body>
 </html>

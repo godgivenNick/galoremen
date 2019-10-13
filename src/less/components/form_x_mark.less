@@ -1,7 +1,11 @@
 .form-x {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: var(--galore_grey_dark);
 
     padding-top: 88px;
@@ -10,7 +14,10 @@
     position: relative;
 
     &__n-container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         z-index: 2;
     }
 
@@ -50,16 +57,30 @@
 
     &__row {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     &__col {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-shrink: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
 
         max-width: 393px;
         margin-left: 30px;
@@ -118,7 +139,8 @@
     .form-x__n-container {
 
         & > .form-x__row {
-            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
             
             .form-x__row {
                 margin-bottom: 30px;
@@ -134,8 +156,11 @@
 
     .form-x input,
     .form-x button {
-        flex-grow: 1;
-        flex-shrink: 1;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
     }
 
 }
@@ -154,7 +179,10 @@
 
 
     .form-x__n-container > .form-x__row .form-x__row {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .form-x input:not(:last-child), .form-x button:not(:last-child) {
@@ -176,6 +204,7 @@
 
 @media screen and (max-width: 425px){
     .form-x__col {
-        flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
     }
 }

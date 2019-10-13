@@ -6,8 +6,11 @@
   padding-top: 56px;
   padding-bottom: 64px;
 
-  &__n-contaienr {
+  &__n-container {
     align-items: flex-start;
+    justify-content: space-between;
+
+    // padding: 0 40px;
   }
 }
 
@@ -23,6 +26,10 @@
 .product-card-galery {
   width: 816px;
   height: 816px;
+
+  width: 100%;
+  max-width: calc(100% - 816px);
+  max-width: 816px;
 
   padding-right: 30px;
 
@@ -303,6 +310,9 @@
 
     width: 253px;
     flex-shrink: 1;
+
+    min-width: 100px;
+    width: calc(100% / 3 - 30px);
   }
 }
 
@@ -347,4 +357,125 @@
 
   }
 
+}
+
+.product-card__name._mobile-only {
+  display: none;
+}
+
+
+@media screen and (max-width: 1800px){
+
+  .product-card-galery {
+    max-width: 640px;
+  }
+
+
+  .product-card-galery__main {
+    padding-bottom: 30px;
+  }
+
+  .field-counter {
+    width: 220px;
+  }
+
+}
+
+
+@media screen and (max-width: 1300px){
+
+  .product-card-galery {
+    // max-width: 560px;
+    height: auto;
+    // align-self: center;
+    padding-right: 0;
+    order: 2;
+  }
+
+  .product-card__name._mobile-only {
+    // display: flex;
+  }
+
+  .product-card-galery__tumbs {
+    position: static;
+  }
+
+  .product-card__n-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card-main {
+    margin-bottom: 32px;
+  }
+
+  .product-card-ctrl {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+  .field-counter {
+    // margin: 0 auto;
+    // width: 100%;
+    // max-width: 300px;
+    // margin-bottom: 15px;
+  }
+
+
+  .product-card-ctrl__btn {
+    width: calc(50% - 15px);
+
+    width: calc(100% / 3 - 30px);
+
+    margin-left: 0;
+  }
+
+}
+
+
+
+@media screen and (max-width: 640px){
+
+  .field-counter {
+    // margin-bottom: 16px;
+  }
+
+  .product-card-galery__tumbs {
+    width: 100%;
+  }
+
+  .product-card-tab {
+    width: auto;
+    padding: 0 8px;
+  }
+
+  .product-card-ctrl {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card-ctrl__btn {
+    width: 100%;
+    margin-top: 16px;
+    &:not(:last-child){
+    }
+  }
+
+
+  .product-card-footer {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .product-card-footer__item {
+
+    &:not(:last-child){
+      margin-bottom: 24px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 425px){
 }

@@ -1,9 +1,18 @@
 .company-map {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
-  align-items: center;
+  -webkit-box-align: center;
+
+      -ms-flex-align: center;
+
+          align-items: center;
 
   margin-top: 165px;
   margin-bottom: 152px;
@@ -14,8 +23,16 @@
     padding-top: 96px;
     width: calc(100% - 260px);
 
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+
+    -webkit-box-direction: normal;
+
+        -ms-flex-direction: column;
+
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 
     position: relative;
 
@@ -40,27 +57,41 @@
 
       max-width: 676px;
 
-      order: 1;
+      -webkit-box-ordinal-group: 2;
+
+          -ms-flex-order: 1;
+
+              order: 1;
     }
 
     &._right {
-      align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
       margin-top: 64px;
       text-align: right;
 
       max-width: 957px;
 
-      order: 3;
+      -webkit-box-ordinal-group: 4;
+
+          -ms-flex-order: 3;
+
+              order: 3;
     }
 
   }
 
 
   &__list {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     li {
       width: 25%;
@@ -91,4 +122,48 @@
       }
     }
   }
+}
+
+
+
+
+
+@media screen and (max-width: 1600px){
+
+  .company-map {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .company-map__n-container {
+    width: 100%;
+  }
+
+  .company-map__n-container img {
+    top: calc(50% - 250px);
+  }
+
+}
+
+@media screen and (max-width: 768px){
+
+  .company-map__title._left {
+    margin-bottom: 32px;
+  }
+
+  .company-map__title._right {
+    margin-top: 32px;
+  }
+
+  .company-map__list li {
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 425px){
+  .company-map__list li {
+    width: 100%;
+  }
+
 }

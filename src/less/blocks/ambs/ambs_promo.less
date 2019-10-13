@@ -1,12 +1,18 @@
 .ambs-promo {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
   min-height: 680px;
 
   &__n-container {
-      align-items: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
       position: relative;
   }
 
@@ -22,9 +28,18 @@
       width: 100%;
       max-width: 674px;
 
+      display: -webkit-box;
+
+      display: -ms-flexbox;
+
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
 
       padding-top: 28px;
       padding-bottom: 64px;
@@ -66,9 +81,17 @@
       width: 816px;
       height: 816px;
 
+      display: -webkit-box;
+
+      display: -ms-flexbox;
+
       display: flex;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
 
       // background: var(--galore_gradient_azure);
 
@@ -94,7 +117,8 @@
         }
 
         .x_mark_svg {
-            transform: scale(.75);
+            -webkit-transform: scale(.75);
+                    transform: scale(.75);
             right: -60px;
             top: -70px;
 
@@ -122,7 +146,8 @@
 
 
     .ambs-promo .x_mark_svg {
-        transform: scale(.5);
+        -webkit-transform: scale(.5);
+                transform: scale(.5);
         right: -164px;
     }
 
@@ -162,8 +187,11 @@
     }
 
     .ambs-promo__form {
-        flex-wrap: wrap;
-        align-items: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
 
         input {
             max-width: 100%;

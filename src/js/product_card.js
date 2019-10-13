@@ -92,11 +92,44 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 
 
+
+  var client_width = document.documentElement.clientWidth; //     ширина окна
+  var same_slider_slides_count = 4;
+  var viewed_list_items_count = 3;
+  var galery_tumbs_count = 5;
+
+  if(+client_width <= 1800){
+    galery_tumbs_count = 4;
+  }
+
+  if(+client_width <= 1300){
+    viewed_list_items_count = 2;
+  }
+
+  if(+client_width <= 1024){
+    same_slider_slides_count = 3;
+  }
+
+
+  if(+client_width <= 768){
+    same_slider_slides_count = 2;
+    viewed_list_items_count = 1;
+  }
+
+  if(+client_width <= 640){
+    galery_tumbs_count = 3;
+  }
+
+  if(+client_width <= 425){
+    same_slider_slides_count = 1;
+    galery_tumbs_count = 2;
+  }
+
   // [ 4 ]  Слайдер "Так же покупают"
   var same_slider = new Swiper('.product-same-slider__wrap', {
 
     init: true,
-    slidesPerView: 4,
+    slidesPerView: same_slider_slides_count,
     speed: 600,
     spaceBetween: 30,
 
@@ -113,12 +146,8 @@ document.addEventListener('DOMContentLoaded', function(){
   // [ 5 ] слайдер Галерея товара
   var galery_tumbs = new Swiper('.product-card-galery__tumbs', {
     spaceBetween: 30,
-    slidesPerView: 5,
+    slidesPerView: galery_tumbs_count,
     loop: false,
-    // freeMode: true,
-    // loopedSlides: 5, //looped slides should be the same
-    // watchSlidesVisibility: true,
-    // watchSlidesProgress: true,
 
     slideThumbActiveClass: '_active',
   });
@@ -127,11 +156,6 @@ document.addEventListener('DOMContentLoaded', function(){
     spaceBetween: 100,
     loop: false,
     slidesPerView: 1,
-
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
 
     thumbs: {
       swiper: galery_tumbs,
@@ -147,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var viewed_list = document.querySelector('.product-viewed__list');
   var viewed_list_items = Array.from(viewed_list.querySelectorAll('.product-viewed-item'));
 
-  if(viewed_list_items.length < 3){
+  if(viewed_list_items.length < +viewed_list_items_count){
 
     var default_item_html = `
       <div class="product-viewed-item _empty">
@@ -155,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function(){
       </div>
     `;
 
-    for(let i=0; i < 3 - +viewed_list_items.length; i++){
+    for(let i=0; i < +viewed_list_items_count - +viewed_list_items.length; i++){
       viewed_list.innerHTML += default_item_html;
     }
 
@@ -165,7 +189,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-
+  // if(+client_width <= 1800){
+  //   galery_tumbs_count = 4;
+  // }
 
 
 

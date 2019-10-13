@@ -1,14 +1,21 @@
 .main-room {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     padding-top: 152px;
     padding-bottom: 152px;
 
 
     &__n-container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 
@@ -30,8 +37,12 @@
 
     &__galery {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
 
         margin-bottom: 64px;
     }
@@ -39,17 +50,26 @@
 
 
     &__box {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 
         width: calc(50% - 15px);
     }
 
 
     &__img {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         border: 1px solid #707070;
 
@@ -71,4 +91,44 @@
             }
         }
     }
+}
+
+
+
+
+@media screen and (max-width: 1300px){
+
+  .main-room {
+    padding: 80px 0;
+  }
+
+}
+
+
+@media screen and (max-width: 768px){
+
+  .main-room__galery {
+    margin-bottom: 32px;
+  }
+
+  .main-room__address {
+    font-size: 28px;
+  }
+
+  .main-room__img._x4 {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .main-room__galery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .main-room__box {
+    width: 100%;
+  }
 }

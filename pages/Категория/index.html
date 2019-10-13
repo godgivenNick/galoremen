@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Nick G.">
+  <title>gogi</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" type="text/css" href="css/swiper.5.min.css"><!-- Подключение общих для всех страниц стилей -->
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=1"><!-- Стили для стр. "Категория" -->
+  <link rel="stylesheet" type="text/css" href="css/category.css?v=1">
+</head>
+
+<body>
+  <!-- sprite с svg-иконками --><svg width="0" height="0" class="hidden">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23.75" id="cart">
+      <path
+        d="M19.35 5H18V2.5A2.443 2.443 0 0 0 15.6 0H8.4A2.443 2.443 0 0 0 6 2.5V5H4.65a2.443 2.443 0 0 0-2.4 2.5L0 21.25a2.443 2.443 0 0 0 2.4 2.5h19.2a2.443 2.443 0 0 0 2.4-2.5L21.75 7.5a2.443 2.443 0 0 0-2.4-2.5zM8.4 2.5h7.2V5H8.4zm13.2 18.75H2.4L4.65 7.5H6V10h2.4V7.5h7.2V10H18V7.5h1.35z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.667 20.545" id="compare">
+      <path
+        d="M13.333 20.545V5.503h-2.666v15.042zm5.333 0V8.805H16v11.74zM8 20.545V0H5.333v20.545zm-8 0h2.667v-8.438H0z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.333 13.333" id="geo">
+      <path
+        d="M4.667 0A4.663 4.663 0 0 0 0 4.667c0 3.5 4.667 8.667 4.667 8.667s4.667-5.167 4.667-8.667A4.663 4.663 0 0 0 4.667 0zm0 6.333a1.667 1.667 0 1 1 1.667-1.667 1.667 1.667 0 0 1-1.667 1.667z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.667 24.467" id="heart_empty">
+      <path
+        d="M19.333 0a7.985 7.985 0 0 0-6 2.787 7.985 7.985 0 0 0-6-2.787A7.262 7.262 0 0 0 0 7.333c0 5.04 4.533 9.147 11.4 15.387l1.933 1.747 1.933-1.76c6.867-6.227 11.4-10.333 11.4-15.373A7.262 7.262 0 0 0 19.333 0zm-5.866 20.733l-.133.133-.133-.133c-6.347-5.747-10.533-9.547-10.533-13.4a4.557 4.557 0 0 1 4.665-4.666 5.213 5.213 0 0 1 4.76 3.147h2.493a5.179 5.179 0 0 1 4.747-3.147A4.557 4.557 0 0 1 24 7.333c0 3.854-4.187 7.654-10.533 13.4z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.32 23.32" id="search">
+      <path
+        d="M16.667 14.667h-1.054l-.373-.36a8.68 8.68 0 1 0-.933.933l.36.373v1.053l6.667 6.653 1.987-1.987zm-8 0a6 6 0 1 1 6-6 5.992 5.992 0 0 1-6 6z">
+      </path>
+    </symbol>
+    <symbol aria-hidden="true" data-prefix="fas" data-icon="sort-down" xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 320 512" id="sort_down_grey">
+      <path d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z">
+      </path>
+    </symbol>
+    <symbol aria-hidden="true" data-prefix="fas" data-icon="sort-up" xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 320 512" id="sort_up_blue">
+      <path d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" id="tel">
+      <path
+        d="M11.34 8.253a7.629 7.629 0 0 1-2.353-.373.652.652 0 0 0-.673.16L7.267 9.353A10.122 10.122 0 0 1 2.673 4.8l1.3-1.107a.68.68 0 0 0 .16-.68A7.435 7.435 0 0 1 3.76.66.666.666 0 0 0 3.1 0H.793C.433 0 0 .16 0 .66A11.435 11.435 0 0 0 11.34 12a.7.7 0 0 0 .66-.787v-2.3a.666.666 0 0 0-.66-.66z">
+      </path>
+    </symbol>
+  </svg><!-- Шапка -->
+  <header class="header">
+    <div class="header-top">
+      <!-- Левая часть -->
+      <div class="header-top__left">
+        <!-- тут, судя по всему, выбор города. Ебнем потом выпадашку со списком городов --><a class="header-top-geo"
+          href=""><svg class="header-top-icon __geo">
+            <use xlink:href="#geo"></use>
+          </svg><span>Санкт-Петербург</span></a><!-- Адрес компании -->
+        <p class="header-top__address">ТК Гарден Сити, Лахтинский проспект 85Б, 2 этаж</p><!-- Мобильный кусочек -->
+        <div class="header__burger"><span></span></div><a class="header__logo-mobile" href=""><img
+            src="./img/svg/logo_black.svg" alt="Galoremen.ru"></a>
+      </div><!-- Правая часть -->
+      <div class="header-top__right">
+        <div class="header-top__btns"><a class="header-top-tel" href="tel:88125666650"><svg
+              class="header-top-icon __tel">
+              <use xlink:href="#tel"></use>
+            </svg><span>8 (812) 566 66 50</span></a><!-- Привязать событие всплывашки с обратным звонком --><a
+            class="header-top__btn-cta">Заказать звонок</a><!-- Поиск по сайту --><a
+            class="header-top__btn __search"><svg class="header-top-icon __search">
+              <use xlink:href="#search"></use>
+            </svg></a><!-- Сравнение товаров --><a class="header-top__btn __compare" href=""><svg
+              class="header-top-icon __compare">
+              <use xlink:href="#compare"></use>
+            </svg></a><!-- Понравившееся --><a class="header-top__btn __heart" href=""><svg
+              class="header-top-icon __heart">
+              <use xlink:href="#heart_empty"></use>
+            </svg></a><!-- Корзина --><a class="header-top__btn __cart" href=""><svg class="header-top-icon __cart">
+              <use xlink:href="#cart"></use>
+            </svg></a></div>
+      </div>
+    </div><!-- Основное меню и пр. -->
+    <!-- * Необходимо проставить пути в меню и для кнопки "Бизнес с Galore"  -->
+    <div class="header-main">
+      <div class="n-container header-main__n-container">
+        <div class="header-main__logo"><a href="/" title="Galoremen.ru"><img src="./img/svg/logo_black.svg"
+              alt="Galoremen.ru"></a><span class="header-main__logo-desc">Эксклюзивный дистрибьютор редкой мужской
+            косметики.</span></div>
+        <nav class="header-nav"><a class="header-nav-item _dd"><span class="header-nav-item__name">Каталог</span>
+            <ul class="nav-item-dropdown">
+              <li class="nav-item-dropdown__item"><span>Все для бритья</span><span class="_next-icon"></span>
+                <ul class="nav-item-dropdown _sub">
+                  <li class="nav-item-dropdown__item"><span>Бальзам для бороды <span>(1)<span></span></li>
+                  <li class="nav-item-dropdown__item"><span>Масло для бороды <span>(2)<span></span></li>
+                  <li class="nav-item-dropdown__item"><span>Расчески для бороды <span>(6)<span></span></li>
+                  <li class="nav-item-dropdown__item"><span>Еще что-то для бороды <span>(6)<span></span></li>
+                  <li class="nav-item-dropdown__item"><span>Борода для бороды <span>(6)<span></span></li>
+                </ul>
+              </li>
+              <li class="nav-item-dropdown__item"><span>Еще че-т для бритья</span><span class="_next-icon"></span>
+                <ul class="nav-item-dropdown _sub">
+                  <li class="nav-item-dropdown__item"><span>Бальзам для бороды <span>(1)<span></span></li>
+                  <li class="nav-item-dropdown__item"><span>Масло для бороды <span>(2)<span></span></li>
+                </ul>
+              </li>
+            </ul>
+          </a><a class="header-nav-item _dd" href="javascript:void();"><span class="header-nav-item__name">Бренды</span>
+            <ul class="nav-item-dropdown">
+              <li class="nav-item-dropdown__item"><span>Бренд 1</span><span class="_next-icon"></span>
+                <ul class="nav-item-dropdown _sub">
+                  <li class="nav-item-dropdown__item"><span>Бальзам <span>(1)<span></span></li>
+                  <li class="nav-item-dropdown__item"><span>Масло <span>(2)<span></span></li>
+                </ul>
+              </li>
+              <li class="nav-item-dropdown__item"><span>Бренд 2</span><span class="_next-icon"></span>
+                <ul class="nav-item-dropdown _sub">
+                  <li class="nav-item-dropdown__item"><span>Бальзам для бороды <span>(1)<span></span></li>
+                  <li class="nav-item-dropdown__item"><span>Масло для бороды <span>(2)<span></span></li>
+                </ul>
+              </li>
+            </ul>
+          </a><a class="header-nav-item" href=""><span class="header-nav-item__name">Амбассадоры</span></a><a
+            class="header-nav-item" href=""><span class="header-nav-item__name">Компания</span></a><a
+            class="header-nav-item" href=""><span class="header-nav-item__name">Блог</span></a><a
+            class="header-nav-item" href=""><span class="header-nav-item__name">Контакты</span></a></nav><a
+          class="header-main__btn btn btn--black" href="">бизнес с galore</a>
+      </div>
+    </div>
+  </header><!-- Главный блок, внутри которого все блоки для страницы (без header'а и footer'а) -->
+  <main class="main-block">
+    <!-- Category -->
+    <!-- Крошки -->
+    <div class="crumbs">
+      <div class="n-container crumbs__n-container">
+        <!-- Для крошки текущей страницы добавляем класс '_current' --><a class="crumbs__btn" href="">
+          < Назад</a> <a class="crumbs__btn" href="">Главная
+        </a><a class="crumbs__btn _current" href="">Каталог</a></div>
+    </div><!-- Category первый экран -->
+    <section class="category-promo">
+      <div class="n-container category-promo__n-container">
+        <div class="category-promo__content">
+          <div class="category-promo__title heading-title-l">Face and Body</div>
+          <div class="category-promo__sub-title">Мужская косметика для ухода за кожей лица и тела</div>
+          <div class="category-promo__text">Для мужчины косметика для бороды и усов является залогом их ухоженности и
+            здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и
+            аксессуары по уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой
+            линейки косметики.</div><a class="category-promo__btn btn btn--black" href="#category_catalog">Смотреть
+            каталог</a>
+        </div>
+        <div class='x_mark_svg'>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="816" height="816"
+            viewBox="0 0 816 816">
+            <defs>
+              <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                <stop offset="0" stop-color="#0ccfc4" />
+                <stop offset="1" stop-color="#066862" />
+              </linearGradient>
+            </defs>
+            <clipPath id="test">
+              <path id="Union_20" data-name="Union 20"
+                d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z"
+                opacity="0.5" fill="url(#linear-gradient)" />
+            </clipPath>
+            <image width="1330" height="855" href="/img/x_mark/x_mark_try.jpg" clip-path="url(#test)" x='-256px'
+              y='-20px' />
+            <path id="Union_20" data-name="Union 20"
+              d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z"
+              opacity="0.5" fill="url(#linear-gradient)" x='816px' />
+          </svg>
+        </div>
+      </div>
+    </section><!-- Ссылочки на товар или бренд?  -->
+    <section class="category-links">
+      <div class="n-container category-links__n-container"><a class="category-link" href="">
+          <div class="category-link__wrap"><img src="/img/category/links/1.jpg" alt=""></div>
+          <div class="category-link__footer">Уход за лицом</div>
+        </a><a class="category-link" href="">
+          <div class="category-link__wrap"><img src="/img/category/links/2.jpg" alt=""></div>
+          <div class="category-link__footer">Уход за телом</div>
+        </a><a class="category-link" href="">
+          <div class="category-link__wrap"><img src="/img/category/links/1.jpg" alt=""></div>
+          <div class="category-link__footer">Уход за лицом</div>
+        </a><a class="category-link" href="">
+          <div class="category-link__wrap"><img src="/img/category/links/2.jpg" alt=""></div>
+          <div class="category-link__footer">Уход за телом</div>
+        </a><a class="category-link" href="">
+          <div class="category-link__wrap"><img src="/img/category/links/1.jpg" alt=""></div>
+          <div class="category-link__footer">Уход за лицом</div>
+        </a><a class="category-link" href="">
+          <div class="category-link__wrap"><img src="/img/category/links/2.jpg" alt=""></div>
+          <div class="category-link__footer">Уход за телом</div>
+        </a></div>
+    </section><!-- Category каталог товаров -->
+    <section class="category-catalog" id="category_catalog">
+      <div class="n-container category-catalog__n-container">
+        <!-- Фильтр -->
+        <div class="category-catalog-filter">
+          <div class="category-catalog-filter__tabs">
+            <div class="category-catalog-filter__tab _active" filter-tab="1">Бренд</div>
+            <div class="category-catalog-filter__tab" filter-tab="2">Тип продукта</div>
+            <div class="category-catalog-filter__tab" filter-tab="3">Цена</div>
+            <div class="category-catalog-filter__tab" filter-tab="4">Страна производитель</div>
+          </div><!-- По брендам -->
+          <div class="category-catalog-filter__filters _active" filter-id="1">
+            <label class="category-catalog-filter__checkbox">
+              <input type="checkbox"><span>London Grooming</span>
+            </label>
+            <label class="category-catalog-filter__checkbox">
+              <input type="checkbox"><span>London Grooming</span>
+            </label>
+            <label class="category-catalog-filter__checkbox">
+              <input type="checkbox"><span>Ruger</span>
+            </label>
+          </div><!-- По типу -->
+          <div class="category-catalog-filter__filters" filter-id="2">
+            <label class="category-catalog-filter__checkbox">
+              <input type="checkbox"><span>Сигареты</span>
+            </label>
+            <label class="category-catalog-filter__checkbox">
+              <input type="checkbox"><span>Кокаин</span>
+            </label>
+            <label class="category-catalog-filter__checkbox">
+              <input type="checkbox"><span>Халва</span>
+            </label>
+          </div><!-- Разброс цен -->
+          <div class="category-catalog-filter__filters" filter-id="3">
+            <div class="category-catalog-filter-range" max-price="50000">
+              <p class="category-catalog-filter-range__text">Диапазон цен:</p>
+              <div class="category-catalog-filter-range__col">
+                <div class="category-catalog-filter-range__prices">
+                  <input class="field-face" type="text" id="min_price" value="0"><span>-</span>
+                  <input class="field-face" type="text" id="max_price"><span>Руб.</span>
+                </div>
+                <div class="category-catalog-filter-range__range"></div>
+              </div>
+            </div>
+          </div><!-- По стране -->
+          <div class="category-catalog-filter__filters" filter-id="4">
+            <label class="category-catalog-filter__checkbox">
+              <input type="checkbox"><span>Россия</span>
+            </label>
+            <label class="category-catalog-filter__checkbox">
+              <input type="checkbox"><span>Казахстан</span>
+            </label>
+            <label class="category-catalog-filter__checkbox">
+              <input type="checkbox"><span>Ямайка</span>
+            </label>
+          </div>
+        </div><!-- Каталог -->
+        <!-- Отображаем 8 товаров ( у меня 4 для экономии времени) -->
+        <div class="category-catalog__list">
+          <!-- Карточка товара -->
+          <div class="category-catalog-item">
+            <div class="category-catalog-item__header">
+              <button class="category-catalog-item__icon __compare"><svg>
+                  <use xlink:href="#compare"></use>
+                </svg>
+              </button>
+              <button class="category-catalog-item__icon __heart"><svg>
+                  <use xlink:href="#heart_empty"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="category-catalog-item__img"><img src="./img/category/galery/1.png" alt=""></div><a
+              class="category-catalog-item__name" href="" target="_blank">Паста сильной фиксации с легким блеском SATIN
+              Vol. 4 Ruger, 100 мл</a><span class="category-catalog-item__aviability">В наличии</span>
+            <div class="category-catalog-item__prices"><span class="category-catalog-item__price">3 990 ₽ </span><span
+                class="category-catalog-item__price _old">6 990 ₽</span></div>
+            <button class="category-catalog-item__btn">В корзину</button>
+          </div>
+          <div class="category-catalog-item">
+            <div class="category-catalog-item__header">
+              <button class="category-catalog-item__icon __compare"><svg>
+                  <use xlink:href="#compare"></use>
+                </svg>
+              </button>
+              <button class="category-catalog-item__icon __heart"><svg>
+                  <use xlink:href="#heart_empty"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="category-catalog-item__img"><img src="./img/category/galery/1.png" alt=""></div><a
+              class="category-catalog-item__name" href="" target="_blank">Паста сильной фиксации с легким блеском SATIN
+              Vol. 4 Ruger, 100 мл</a><span class="category-catalog-item__aviability">В наличии</span>
+            <div class="category-catalog-item__prices"><span class="category-catalog-item__price">3 990 ₽ </span><span
+                class="category-catalog-item__price _old">6 990 ₽</span></div>
+            <button class="category-catalog-item__btn">В корзину</button>
+          </div>
+          <div class="category-catalog-item">
+            <div class="category-catalog-item__header">
+              <button class="category-catalog-item__icon __compare"><svg>
+                  <use xlink:href="#compare"></use>
+                </svg>
+              </button>
+              <button class="category-catalog-item__icon __heart"><svg>
+                  <use xlink:href="#heart_empty"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="category-catalog-item__img"><img src="./img/category/galery/1.png" alt=""></div><a
+              class="category-catalog-item__name" href="" target="_blank">Паста сильной фиксации с легким блеском SATIN
+              Vol. 4 Ruger, 100 мл</a><span class="category-catalog-item__aviability">В наличии</span>
+            <div class="category-catalog-item__prices"><span class="category-catalog-item__price">3 990 ₽ </span><span
+                class="category-catalog-item__price _old">6 990 ₽</span></div>
+            <button class="category-catalog-item__btn">В корзину</button>
+          </div>
+          <div class="category-catalog-item">
+            <div class="category-catalog-item__header">
+              <button class="category-catalog-item__icon __compare"><svg>
+                  <use xlink:href="#compare"></use>
+                </svg>
+              </button>
+              <button class="category-catalog-item__icon __heart"><svg>
+                  <use xlink:href="#heart_empty"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="category-catalog-item__img"><img src="./img/category/galery/1.png" alt=""></div><a
+              class="category-catalog-item__name" href="" target="_blank">Паста сильной фиксации с легким блеском SATIN
+              Vol. 4 Ruger, 100 мл</a><span class="category-catalog-item__aviability">В наличии</span>
+            <div class="category-catalog-item__prices"><span class="category-catalog-item__price">3 990 ₽ </span><span
+                class="category-catalog-item__price _old">6 990 ₽</span></div>
+            <button class="category-catalog-item__btn">В корзину</button>
+          </div>
+        </div><!-- Кнопка "Показать еще" -->
+        <button class="category-catalog__show-more-btn btn btn--black">Показать еще N</button>
+      </div>
+    </section><!-- Большая форма с крестом -->
+    <form class="form-x" action="">
+      <div class="n-container form-x__n-container">
+        <div class="form-x__title">Все, что будет написано здесь для оптовиков, бросится в глаза</div>
+        <div class="form-x__text">Оставь заявку и получи возможность влиять на свое будущее. Без спама и рекламы —
+          только мужские разговоры о бизнесе.</div>
+        <div class="form-x__row">
+          <div class="form-x__row">
+            <input class="field-face" type="text" placeholder="Оптовик Оптович">
+            <input class="field-face" type="email" placeholder="optovik@gmail.com">
+            <button class="btn btn--white">Подписаться</button>
+          </div>
+          <div class="form-x__col">
+            <p class="form-x__text-min">Отдел поддержки оптовых клиентов</p><a class="form-x__text-tel"
+              href="tel:88125666650">8 (812) 566 66 50</a>
+          </div>
+        </div>
+      </div><svg xmlns="http://www.w3.org/2000/svg" class='x-mark-azure' xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="816" height="816" viewBox="0 0 816 816">
+        <defs>
+          <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#0ccfc4" />
+            <stop offset="1" stop-color="#066862" />
+          </linearGradient>
+        </defs>
+        <path id="Union_20" data-name="Union 20"
+          d="M408,571.2,163.2,816,0,652.8,244.8,408,0,163.2,163.2,0,408,244.8,652.8,0,816,163.2,571.2,408,816,652.8,652.8,816Z"
+          opacity="0.5" fill="url(#linear-gradient)" />
+      </svg>
+    </form><!-- SEO-абзац с текстом -->
+    <section class="paragraph">
+      <div class="n-container paragraph__n-container">
+        <div class="x-mark-64 paragraph__x-mark-64"></div>
+        <div class="x-mark-64 paragraph__x-mark-64"></div>
+        <div class="paragraph__col">
+          <h4 class="paragraph__title">Мужская косметика и аксессуары</h4>
+          <p class="paragraph__text">Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового
+            состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по
+            уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой линейки
+            косметики.</p>
+          <p class="paragraph__text">Актуальные цены на мужскую косметику для бороды в Санкт-Петербурге и Москве
+            представлены в каталоге интернет-магазина. Оформив покупку на нашем сайте, вы получаете оригинальные
+            сертифицированные средства премиального качества.</p>
+        </div>
+      </div>
+    </section>
+  </main><i class="main-overlay"></i><!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="n-container footer-top__n-container"><img class="footer-top__logo" src="./img/svg/logo_white.svg"
+          alt="Galoremen">
+        <div class="footer-top__row">
+          <div class="footer-info">
+            <p>Санкт-Петербург, Лахтинский проспект 85Б, ТК «Гарден Сити», 2 эт. <br>Пн-Пт — 10.30 - 20.30 <br>Сб - Вс —
+              выходной</p><a href="tel:88125666650" link="tel">8 (812) 566 66 50</a><a href="mailto:info@galoremen.ru"
+              link="email">info@galoremen.ru</a>
+          </div>
+          <nav class="footer-menu">
+            <div class="footer-menu-item footer-menu-item--double"><span class="footer-menu-item__title">Эксклюзивные
+                бренды для России</span>
+              <ul>
+                <li><a href="/">London Grooming</a></li>
+                <li><a href="/">Solomons</a></li>
+                <li><a href="/">Razer MD</a></li>
+                <li><a href="/">Pacionos</a></li>
+                <li><a href="/">Chicago Comb</a></li>
+                <li><a href="/">Tomb 45</a></li>
+                <li><a href="/">Menspire</a></li>
+                <li><a href="/">Fresh Heads</a></li>
+                <li><a href="/">Bona Fide</a></li>
+                <li><a href="/">Fulton & Roark</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu-item"><span class="footer-menu-item__title">Информация</span>
+              <ul>
+                <li><a href="/">О компании</a></li>
+                <li><a href="/">Работать с нами</a></li>
+                <li><a href="/">Политика приватности</a></li>
+                <li><a href="/">Условия использования</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu-item"><span class="footer-menu-item__title">Покупателям</span>
+              <ul>
+                <li><a href="/">Контакты</a></li>
+                <li><a href="/">Гарантия и оплата</a></li>
+                <li><a href="/">Доставка и возврат</a></li>
+                <li><a href="/">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu-item"><span class="footer-menu-item__title">Своя тусовка</span>
+              <ul>
+                <li><a href="/" target="_blank">Instagram</a></li>
+                <li><a href="/" target="_blank">VK</a></li>
+                <li><a href="/" target="_blank">Facebook</a></li>
+                <li><a href="/" target="_blank">YouTube</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="footer-mid">
+      <div class="n-container footer-mid__n-container">
+        <p class="footer-mid__title">Не пропусти ништяки! Подпишись на хорошие новости!</p>
+        <form class="footer-mid-form" action="" type="">
+          <input class="field-face" type="email" placeholder="Ваш E-mail">
+          <button class="btn btn--white" type="submit">Подписаться</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="n-container footer-bot__n-container">
+        <p>Все права защищены.© 2010-2019 Galoremen</p><a href="http://instagram.com/midyanets" target="_blank"
+          title="instagram.com/midyanets">Midyanets 2019</a>
+      </div>
+    </div>
+  </footer><!-- Подрубка общих скриптов и библ. -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="application/javascript" src="./js/jquery.fancybox.min.js"></script>
+  <script type="application/javascript" src="./js/swiper.5.min.js"></script><!-- Для шапки => для каждой стр. -->
+  <script type="application/javascript" src="./js/header.js"></script><!-- Для остальных стр. -->
+  <script type="application/javascript" src="./js/galore.js"></script>
+
+</body>
+
+</html>

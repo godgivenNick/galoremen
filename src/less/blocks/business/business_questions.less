@@ -1,13 +1,20 @@
 .business-q {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     margin-bottom: 200px; /*    ниже форма с крестом     */
 
 
     &__n-container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 
@@ -19,16 +26,26 @@
 
     &__list {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
 
     &-item {
 
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         padding: 88px 0;
         border-top: 1px solid var(--galore_grey_light);
@@ -42,9 +59,17 @@
             width: 100%;
             padding-right: 140px;
 
+            display: -webkit-box;
+
+            display: -ms-flexbox;
+
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
 
             cursor: pointer;
             &:hover {
@@ -71,8 +96,17 @@
 
             padding-top: 40px;
 
+            display: -webkit-box;
+
+            display: -ms-flexbox;
+
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+
+            -webkit-transition: .35s ease-out;
 
             transition: .35s ease-out;
 
@@ -100,8 +134,13 @@
 
         &__list {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
 
             li {
                 width: 100%;
@@ -163,13 +202,17 @@
                 }
             
                 &::before {
-                    transform-origin: center center;
-                    transform: rotate(-45deg);
+                    -webkit-transform-origin: center center;
+                            transform-origin: center center;
+                    -webkit-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
                 }
             
                 &::after {
-                    transform-origin: center center;
-                    transform: rotate(45deg);
+                    -webkit-transform-origin: center center;
+                            transform-origin: center center;
+                    -webkit-transform: rotate(45deg);
+                            transform: rotate(45deg);
                 }
             }
         }
@@ -197,14 +240,17 @@
     .business-q-item__icon:not(._show) {
         width: 30px;
         height: 30px;
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
     }
 
     .business-q-item__icon._show {
         width: 30px;
         height: 30px;
 
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+
+            flex-shrink: 0;
     }
 
     .business-q-item__icon._show::before,

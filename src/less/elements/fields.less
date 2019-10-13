@@ -1,7 +1,11 @@
 .field-face {
     height: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     padding-left: 30px;
     padding-right: 30px;
@@ -22,19 +26,35 @@
 .field-counter {
   width: 253px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  align-items: center;
-  flex-shrink: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 
   &__plus,
   &__minus {
     width: 64px;
     height: 64px;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
@@ -46,6 +66,7 @@
     background-color: var(--galore_grey_lightest);
 
     cursor: pointer;
+    -webkit-transition: .2s ease;
     transition: .2s ease;
 
     &:hover {
@@ -57,12 +78,14 @@
     }
   }
 
-  &__plus { order: 3; }
-  &__minus { order: 1; }
+  &__plus { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
+  &__minus { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 
 
   &__field-face {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     width: calc(100% - 64px * 2);
     text-align: center;
 

@@ -1,9 +1,14 @@
 .link-x1 {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     &__n-container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding-top: 152px;
     }
 
@@ -14,8 +19,13 @@
 
     &-link {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         position: relative;
     }
@@ -33,8 +43,11 @@
             width: 100%;
             height: auto;
 
+            -webkit-transition: .3s ease;
+
             transition: .3s ease;
-            transform-origin: center center;
+            -webkit-transform-origin: center center;
+                    transform-origin: center center;
 
             z-index: 1;
         }
@@ -54,6 +67,7 @@
             height: calc(100% - 1px);
 
             background-color: rgba(33,33,33,.5);
+            -webkit-transition: .3s ease-out;
             transition: .3s ease-out;
             opacity: 0;
             pointer-events: none;
@@ -65,9 +79,17 @@
         height: 152px;
         padding: 0 30px;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         background-color: #292727;
         color: var(--galore_white);
@@ -80,6 +102,8 @@
         text-align: center;
 
         text-transform: uppercase;
+
+        -webkit-transition: .25s ease;
 
         transition: .25s ease;
 
@@ -104,4 +128,33 @@
             text-decoration: underline;
         }
     }
+}
+
+
+
+@media screen and (max-width: 1300px){
+  .link-x1 .heading-title-l {
+    margin-bottom: 32px;
+  }
+
+  .link-x1__n-container {
+    padding-top: 80px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .link-x1__footer {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .link-x1__footer {
+    height: 120px;
+    
+  }
+
+  .link-x1-link__wrap {
+    min-height: 350px;
+  }
 }

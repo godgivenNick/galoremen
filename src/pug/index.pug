@@ -10,9 +10,6 @@ html(lang="ru")
 		<!-- Шапка -->
 		include blocks/header.pug
 
-		//- GUi для демонстрации элементов
-		//- include blocks/GUI.pug
-
 		<!-- Главный блок, внутри которого все блоки для страницы (без header'а и footer'а) -->
 		include blocks/main.pug
 
@@ -23,29 +20,16 @@ html(lang="ru")
 
 		<!-- Подрубка общих скриптов и библ. -->
 		script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
-
 		script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
-
-		
-
 		script(type="application/javascript" src='./js/jquery.fancybox.min.js')
-		//- script(type="application/javascript" src='./js/swiper.min.js')
 		script(type="application/javascript" src='./js/swiper.5.min.js')
 
 
-		<!-- Скрипты для конкретных страниц -->
+		<!-- Для шапки => для каждой стр. -->
 		script(type="application/javascript" src='./js/header.js')
 
-		script(type="application/javascript" src='./js/main.js')
+		//- <!-- Для остальных стр. -->
+		//- script(type="application/javascript" src='./js/galore.js')
 
-		script(type="application/javascript" src='./js/category.js')
-
+		<!-- Только для стр. "Товар" -->
 		script(type="application/javascript" src='./js/product_card.js')
-
-		script(type="application/javascript" src='./js/business.js')
-
-		script(type="application/javascript" src='./js/brands.js')
-
-		script(type="application/javascript" src='./js/brand.js')
-
-
