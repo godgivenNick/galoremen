@@ -168,6 +168,52 @@
 .blog-footer__btn-back:hover {
   color: var(--galore_blue);
 }
+.blog-footer__links {
+  display: flex;
+  align-items: center;
+}
+.blog-footer__link {
+  width: 18px;
+  height: 18px;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog-footer__link svg {
+  fill: var(--galore_grey_middle);
+  transition: 0.2s ease-out;
+}
+.blog-footer__link.__fb svg {
+  max-height: 18px;
+}
+.blog-footer__link.__odnoklassniki svg {
+  max-height: 18px;
+}
+.blog-footer__link:hover.__vk svg {
+  fill: #4a76a8;
+}
+.blog-footer__link:hover.__fb svg {
+  fill: #3b5998;
+}
+.blog-footer__link:hover.__odnoklassniki svg {
+  fill: #f7931e;
+}
+.blog-footer__link:hover.__inst svg {
+  fill: #bc046f;
+}
+.blog-footer__link:hover.__twitter svg {
+  fill: #41abe1;
+}
+.blog-footer__link:hover.__tg svg {
+  fill: #2ca8dc;
+}
+.blog-footer__link:hover.__whatsapp svg {
+  fill: #39be4c;
+}
+.blog-footer__link:hover.__viber svg {
+  fill: #7a4e9d;
+}
 @media screen and (max-width: 1300px) {
   .blog-promo {
     padding: 0 80px;
@@ -225,6 +271,16 @@
   }
   .blog-img-box__img {
     width: 100%;
+  }
+  .blog-footer {
+    flex-direction: column;
+  }
+  .blog-footer__btn-back {
+    margin-bottom: 24px;
+    align-self: flex-start;
+  }
+  .blog-footer__links {
+    align-self: flex-end;
   }
 }
 @media screen and (max-width: 425px) {

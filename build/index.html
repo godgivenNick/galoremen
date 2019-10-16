@@ -125,57 +125,65 @@
         </div>
       </div>
     </header><!-- Главный блок, внутри которого все блоки для страницы (без header'а и footer'а) -->
-    <main class="main-block"><!-- Blog -->
-      <section class="blog">
-        <div class="n-container blog__n-container"><!-- Первый экран --> 
-<!-- инлайново задал bg-image, чтоб можно было редачить из админки -->
-          <div class="blog-promo" style="background-image: url(&quot;./img/blog/blog_promo_bg.jpg&quot;);">
-            <p class="blog-promo__info">Мероприятие, Санкт-Петербург</p>
-            <p class="blog-promo__title">Выездная фотосессия с великими мастерами современности</p>
-            <p class="blog-promo__date">22 сентября, 2018</p>
+    <main class="main-block"><!-- Blogs --><!-- Хлебные крошки -->
+      <div class="crumbs">
+        <div class="n-container crumbs__n-container"><!-- Для крошки текущей страницы добавляем класс '_current' --><a class="crumbs__btn" href="">< Назад</a><a class="crumbs__btn" href="">Главная</a><a class="crumbs__btn _current" href="">Каталог</a></div>
+      </div><!-- Первый экран -->
+      <section class="blogs-promo">
+        <div class="n-container blogs-promo__n-container">
+          <div class="blogs-promo__title heading-title-l">Blog</div>
+          <div class="blogs-promo-row">
+            <div class="blogs-promo-content"><span class="blogs-promo-content__place">Мероприятие, Санкт-Петербург</span>
+              <div class="blogs-promo-content__title">Выездная фотосессия с великими мастерами современности</div><span class="blogs-promo-content__date">Выездная фотосессия с великими мастерами современности</span>
+              <p class="blogs-promo-content__desc">Для мужчины косметика для бороды и усов является залогом их ухоженности и здорового состояния. Обладатели роскошных бород ежедневно используют различные косметические средства и аксессуары по уходу за волосами и кожей на лице. Интенсивное питание и смягчение – вот основные задачи этой линейки косметики. Актуальные цены на мужскую косметику для бороды в Санкт-Петербурге и Москве представлены в каталоге интернет-магазина. Оформив покупку на нашем сайте, вы получаете оригинальные сертифицированные средства премиального качества.</p>
+              <div class="blogs-promo-content__footer"><a class="blogs-promo-content__btn btn btn--white" href="">Читать статью</a>
+                <div class="blogs-promo-content__views"><span class="blogs-promo-content__views--icon"></span><span class="blogs-promo-content__views--count">1994</span></div>
+              </div>
+            </div>
+            <div class="blogs-promo__img" style="background-image: url(&quot;./img/blog/blog_promo_bg.jpg&quot;);"><!-- сюды тоже вставить тот же путь к картинке --><img src="./img/blog/blog_promo_bg.jpg" alt=""></div>
           </div>
         </div>
-      </section>
-      <section class="blog-text-block">
-        <div class="blog-text-block__title">«Самодостаточный эдипов комплекс: основные моменты»</div>
-        <div class="blog-text-block__text">Очевидно, что художественный вкус аккумулирует суггестивный меланхолик. Переживание и его претворение, следовательно, имитирует реконструктивный подход, именно об этом комплексе движущих сил писал З.Фрейд в теории сублимации. Как было показано выше, механизм эвокации неустойчив.</div>
-        <div class="blog-text-block__text">Экспрессионизм, в первом приближении, конвенционален. Пушкин подарил Гоголю фабулу «Мертвых душ» не потому, что снижение монотонно диссонирует художественный ритуал. Выявляя устойчивые архетипы на примере художественного творчества, можно сказать, что выразительное трансформирует персональный сангвиник. Художественный ритуал имеет биографический метод, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. Синтетическая история искусств монотонно выстраивает определенный механизм эвокации, таким образом, второй комплекс движущих сил получил разработку в трудах А.Берталанфи и Ш.Бюлера. Его экзистенциальная тоска выступает как побудительный мотив творчества, однако творческая доминанта имеет определенный филогенез.</div>
-      </section>
-      <section class="blog-img-box">
-        <div class="blog-img-box__img"><img src="./img/blog/1.jpg" alt=""></div>
-        <div class="blog-img-box__img"><img src="./img/blog/2.jpg" alt=""></div>
-      </section>
-      <section class="blog-text-block">
-        <div class="blog-text-block__title">«Самодостаточный эдипов комплекс: основные моменты»</div>
-        <div class="blog-text-block__text">Аполлоновское начало начинает реализм, таким образом, все перечисленные признаки архетипа и мифа подтверждают, что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Ролевое поведение имеет инвариант. Классический реализм вызывает незначительный биографический метод, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. В работе «Парадокс об актере» Дидро обращал внимание на то, как художественный вкус продолжает неизменный предмет искусства. Иносказательность образа, следовательно, многопланово имитирует социально-психологический фактор. Эти слова совершенно справедливы, однако мистерия диссонирует эпитет.</div>
-      </section>
-      <section class="blog-video">
-        <div class="n-container blog-video__n-container"><!-- инлайново задал bg-image, чтоб можно было редачить из админки -->    
-          <div class="blog-video-bg" style=" background-image: url('./img/company/video_bg.jpg'); "><!-- Подставить ссылку на YouTube --><a class="blog-video__btn" href="https://www.youtube.com/embed/88Ord0X8b_E" data-fancybox>
-              <div class="blog-video__icon"></div></a></div>
-        </div>
-      </section>
-      <section class="blog-text-block">
-        <div class="blog-text-block__title">«Самодостаточный эдипов комплекс: основные моменты»</div>
-        <div class="blog-text-block__text">Аполлоновское начало начинает реализм, таким образом, все перечисленные признаки архетипа и мифа подтверждают, что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Ролевое поведение имеет инвариант. Классический реализм вызывает незначительный биографический метод, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. В работе «Парадокс об актере» Дидро обращал внимание на то, как художественный вкус продолжает неизменный предмет искусства. Иносказательность образа, следовательно, многопланово имитирует социально-психологический фактор. Эти слова совершенно справедливы, однако мистерия диссонирует эпитет.</div>
-        <div class="blog-footer"><a class="blog-footer__btn-back" href="">< Вернуться назад</a>
-          <div class="blog-footer__links"><a class="blog-footer__link __vk" href=""><svg>
-<use xlink:href="#vk"></use>
-</svg></a><a class="blog-footer__link __fb" href=""><svg>
-<use xlink:href="#fb"></use>
-</svg></a><a class="blog-footer__link __odnoklassniki" href=""><svg>
-<use xlink:href="#odnoklassniki"></use>
-</svg></a><a class="blog-footer__link __inst" href=""><svg>
-<use xlink:href="#inst"></use>
-</svg></a><a class="blog-footer__link __twitter" href=""><svg>
-<use xlink:href="#twitter"></use>
-</svg></a><a class="blog-footer__link __tg" href=""><svg>
-<use xlink:href="#tg"></use>
-</svg></a><a class="blog-footer__link __whatsapp" href=""><svg>
-<use xlink:href="#whatsapp"></use>
-</svg></a><a class="blog-footer__link __viber" href=""><svg>
-<use xlink:href="#viber"></use>
-</svg></a></div>
+      </section><!-- Список брендов -->
+      <section class="blogs-main">
+        <div class="n-container blogs-main__n-container">
+          <ul class="blogs-main__list">
+            <li class="blogs-main-item">
+              <div class="blogs-main-item__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+              <div class="blogs-main-item__col"><span class="blogs-main-item__place">Мероприятие, Санкт-Петербург</span>
+                <div class="blogs-main-item__title">Выездная фотосессия с великими мастерами современности</div><span class="blogs-main-item__date">22 октября, 2019</span>
+                <p class="blogs-main-item__desc">Актуальные цены на мужскую косметику для бороды в Санкт-Петербурге и Москве представлены в каталоге интернет-магазина. Оформив покупку на нашем сайте, вы получаете оригинальные сертифицированные…</p>
+                <div class="blogs-main-item__footer"><a class="blogs-main-item__btn btn btn--black" href="">Читать статью</a><span class="blogs-main-item__count">1994</span></div>
+              </div>
+            </li>
+            <li class="blogs-main-item">
+              <div class="blogs-main-item__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+              <div class="blogs-main-item__col"><span class="blogs-main-item__place">Мероприятие, Санкт-Петербург</span>
+                <div class="blogs-main-item__title">Выездная фотосессия с великими мастерами современности</div><span class="blogs-main-item__date">22 октября, 2019</span>
+                <p class="blogs-main-item__desc">Актуальные цены на мужскую косметику для бороды в Санкт-Петербурге и Москве представлены в каталоге интернет-магазина. Оформив покупку на нашем сайте, вы получаете оригинальные сертифицированные…</p>
+                <div class="blogs-main-item__footer"><a class="blogs-main-item__btn btn btn--black" href="">Читать статью</a><span class="blogs-main-item__count">1994</span></div>
+              </div>
+            </li>
+            <button class="blogs-main__show-more btn btn--black">Показать еще</button>
+          </ul><!-- Правая часть с рандомной статьей и инстой -->
+          <div class="blogs-main__aside"><a class="blogs-main-random-item" href="">
+              <div class="blogs-main-random-item__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+              <div class="blogs-main-random-item__col"><span class="blogs-main-random-item__type">Уход за лицом</span>
+                <div class="blogs-main-random-item__name">Выездная фотосессия с великими мастерами современности</div>
+                <div class="blogs-main-random-item__footer"><span class="blogs-main-random-item__date">22 октября, 2019</span><span class="blogs-main-random-item__count">1994</span></div>
+              </div></a>
+            <div class="blogs-main-inst"><a class="blogs-main-inst__heading" href="">Instagram</a>
+              <div class="blogs-main-inst__header">
+                <div class="blogs-main-inst__logo"><img src="./img/svg/logo_black.svg" alt="galoremen"></div><a class="blogs-main-inst__title" href=""><span class="blogs-main-inst__title--name">galoremen</span><span class="blogs-main-inst__title--type">Компания</span></a>
+              </div>
+              <div class="blogs-main-inst__subs"><span>13,1 тыс.</span> подписчиков</div>
+              <div class="blogs-main-inst__galery">
+                <div class="blogs-main-inst__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+                <div class="blogs-main-inst__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+                <div class="blogs-main-inst__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+                <div class="blogs-main-inst__img"><img src="./img/blogs/blogs_item_1.png" alt=""></div>
+              </div><a class="blogs-main-inst__btn btn btn--white" href="">Подписаться</a>
+            </div>
+          </div>
         </div>
       </section>
     </main><i class="main-overlay"></i><!-- Footer -->
